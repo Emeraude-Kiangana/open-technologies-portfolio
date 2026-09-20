@@ -26,8 +26,8 @@ function searchableText(record) {
       ...record.known_limitations,
       ...record.explicit_non_claims,
       ...record.search_terms,
-      ...record.tests.map((test) => \`\${test.label} \${test.result}\`),
-      ...record.checkpoints.map((checkpoint) => \`\${checkpoint.id} \${checkpoint.status}\`),
+      ...record.tests.map((test) => `${test.label} ${test.result}`),
+      ...record.checkpoints.map((checkpoint) => `${checkpoint.id} ${checkpoint.status}`),
     ].join(" "),
   );
 }
