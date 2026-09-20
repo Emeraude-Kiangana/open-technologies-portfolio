@@ -92,14 +92,15 @@ export const projects: ProjectEvidence[] = [
     publicEvidenceStatus: ["AVAILABLE"],
     sourceVisibility: "PUBLIC",
     version: "0.1.0-alpha.0",
-    demo: "NO PUBLIC DEMO",
+    demo: "LOCAL DETERMINISTIC CLI DEMO",
     license: "Apache-2.0",
     source: "Emeraude-Kiangana/ecdf",
     sourceHref: "https://github.com/Emeraude-Kiangana/ecdf",
     verifiedScope: [
       "Local transfer-domain model with explicit states, role rules, invariants, bigint amounts and duplicate-event rejection.",
-      "Normalized main c3a82329bdcd339a99595b64ea3a3dd4ee3adefa.",
-      "27 / 27 automated tests passed on normalized main CI run 35463718531.",
+      "Current main 8ef8002ac538caae69e5e9aa6f093bc826af3f87 includes the bounded LOCAL_DOMAIN_ONLY lifecycle demo.",
+      "Post-merge CI run 35508188094 completed successfully: 29 / 29 tests passed and the deterministic demo step succeeded.",
+      "The demo executes DRAFT → AUTHORIZED → SUBMITTED → SETTLED locally and explicitly records networkSettlement=false.",
       "Foundation evidence remains anchored at commit 34814b06ae28fe5e3a62b9866cb9781332312b7b.",
     ],
     evidence: [
@@ -112,12 +113,16 @@ export const projects: ProjectEvidence[] = [
         href: "https://github.com/Emeraude-Kiangana/ecdf/blob/main/docs/PROJECT-STATUS.md",
       },
       {
-        label: "Normalized main",
-        href: "https://github.com/Emeraude-Kiangana/ecdf/commit/c3a82329bdcd339a99595b64ea3a3dd4ee3adefa",
+        label: "Current main",
+        href: "https://github.com/Emeraude-Kiangana/ecdf/commit/8ef8002ac538caae69e5e9aa6f093bc826af3f87",
       },
       {
-        label: "CI run 35463718531",
-        href: "https://github.com/Emeraude-Kiangana/ecdf/actions/runs/35463718531",
+        label: "CI + demo run 35508188094",
+        href: "https://github.com/Emeraude-Kiangana/ecdf/actions/runs/35508188094",
+      },
+      {
+        label: "Demo source",
+        href: "https://github.com/Emeraude-Kiangana/ecdf/blob/main/src/demo.ts",
       },
       {
         label: "Foundation commit",
@@ -129,11 +134,12 @@ export const projects: ProjectEvidence[] = [
       },
     ],
     limitations: [
+      "The current demo is a local CLI scenario, not a browser-hosted public application.",
       "No live Stellar settlement adapter, RPC/Testnet transaction flow or Mainnet.",
       "No custody, official CDF backing, CBDC/bank claim, production KYC or regulatory approval.",
-      "No public demo, independent clean reproduction or external validation is recorded.",
+      "No independent clean reproduction or external validation is recorded.",
     ],
-    lastVerified: "2026-09-19",
+    lastVerified: "2026-09-20",
   },
   {
     name: "KIANGANA 2.0 / KIF",
@@ -343,33 +349,40 @@ export const projects: ProjectEvidence[] = [
   {
     name: "C.A.O — Chief Agent Officer",
     description:
-      "Professional infrastructure prototype for verified AI talent, deterministic team assembly and authorized mission-execution sandboxing.",
+      "Professional infrastructure prototype for verified AI talent, deterministic team assembly, bounded mission execution and marketplace engagement.",
     projectStatus: ["DOCUMENTED", "IMPLEMENTED", "TESTED"],
     statusBreakdown: [
       {
-        label: "C.A.O Kernel v0.1 · CP-07",
+        label: "C.A.O Kernel v0.1 · CP-08",
         statuses: ["DOCUMENTED", "IMPLEMENTED", "TESTED"],
-        note: "CP-01 through CP-07 are CLOSED / TESTED — CI-BACKED; reproducibility is not claimed.",
+        note: "CP-01 through CP-08 are CLOSED / TESTED — CI-BACKED; reproducibility is not claimed.",
       },
     ],
     publicEvidenceStatus: ["PARTIAL", "PRIVATE SOURCE"],
     sourceVisibility: "PRIVATE",
-    version: "Kernel v0.1 · CP-07",
-    demo: "DETERMINISTIC SANDBOX · NO PUBLIC DEMO",
+    version: "Kernel v0.1 · CP-08",
+    demo: "DETERMINISTIC MARKETPLACE → EXECUTION SANDBOX · NO PUBLIC LIVE SERVICE",
     license: "No license currently granted",
     source: "PRIVATE — Emeraude-Kiangana/chief-agent-officer",
     verifiedScope: [
-      "Professional Contracts, Verified Registry, deterministic matching, Mission Requirements Compiler, Talent Graph, Network Discovery Boundary and Agent Team Assembly are closed checkpoints.",
-      "CP-07 Mission Execution is CLOSED / TESTED — CI-BACKED on main 991a5b7c93e17c6e2769732b59a81e9765aff61f.",
-      "CP-07 proof run 35479200779 completed successfully; the full suite reports 95 / 95 PASS.",
-      "The canonical sandbox records three ordered execution events, deterministic SHA-256 outputs, independent verification and a CLOSED Mission Record.",
+      "CP-01 through CP-08 are closed checkpoints: Professional Contracts, Verified Registry, deterministic matching, Mission Requirements, Talent Graph, Discovery Boundary, Agent Team Assembly, Mission Execution and Marketplace.",
+      "Current main 839b0ea0f4d79e5abbb52d1d440732fda20135ea closes the CP-08 Marketplace Gate.",
+      "CP-08 proof run 35480285634 completed successfully; the full suite reports 113 / 113 PASS.",
+      "Observed marketplace state includes four active verified listings: three Agent Listings and one Team Listing.",
+      "The bounded demo records a 0.21 USD quote, ENGAGED engagement state, payment_state=NOT_IMPLEMENTED and a verified CLOSED Mission Record after CP-07 execution handoff.",
     ],
-    evidence: [],
+    evidence: [
+      {
+        label: "Public CP-08 evidence page",
+        href: "/open-technologies-portfolio/projects/cao/",
+      },
+    ],
     evidenceNote:
-      "Canonical source is private. Verified source anchors: main 991a5b7c93e17c6e2769732b59a81e9765aff61f; CP-07 implementation 096abfeff80307517cd5eb92d06f69f762df4dbb; proof commit 5beccbe2d7d8d8b00b42c9c0b57241e1bd33922e; proof run 35479200779.",
+      "Canonical source is private. Verified source anchors: main 839b0ea0f4d79e5abbb52d1d440732fda20135ea; CP-08 proof run 35480285634. P01 publishes bounded evidence only and does not expose private source contents.",
     limitations: [
-      "No live inter-agent messaging, arbitrary tool execution, live model-provider calls or external side effects are demonstrated.",
-      "Dynamic replanning, failure recovery, settlement, marketplace execution and production readiness are not implemented.",
+      "No payment processing, escrow or financial settlement is implemented.",
+      "Quote does not mean payment; engagement does not mean settlement.",
+      "No public production marketplace, live inter-agent messaging or unrestricted arbitrary tool execution is demonstrated.",
       "Private source limits anonymous inspection; TESTED does not imply REPRODUCIBLE or PUBLIC.",
     ],
     lastVerified: "2026-09-20",
