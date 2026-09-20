@@ -158,6 +158,34 @@ At correction start, GitHub metadata reports:
 
 The connected GitHub tool does not expose repository-description/topic mutation. Those metadata fields require a manual `gh repo edit` action.
 
+## P01-CP-SUPPORT-01 — Evidence-Grounded Portfolio Assistant
+
+**Status: OPEN / IMPLEMENTATION CANDIDATE**
+
+Implemented on the support branch:
+
+- deterministic support knowledge schema and validation;
+- bounded knowledge snapshot for the eight current portfolio entries;
+- deterministic retrieval;
+- deterministic grounded-answer fallback;
+- evidence-ID allow-list validation;
+- Gemini provider adapter;
+- Groq fallback provider adapter;
+- provider router;
+- `/support/` chat UI;
+- server-side HTTP adapter;
+- support tests;
+- tracked-file secret scan.
+
+Closure is **not** claimed until:
+
+- a secure serverless endpoint is deployed;
+- at least one real provider call succeeds through that endpoint;
+- fallback is exercised with real provider unavailability or an equivalent controlled live test;
+- final CI/build/deploy evidence is recorded.
+
+The GitHub Pages frontend must never receive provider API keys.
+
 ## Next checkpoint
 
 **NOT FORMALLY DEFINED**
