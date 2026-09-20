@@ -10,7 +10,7 @@ function normalize(value) {
 }
 
 function tokens(value) {
-  return new Set(normalize(value).split(/\s+/).filter((token) => token.length > 1));
+  return new Set(normalize(value).split(/\s+/).filter((token) => token.length > 2));
 }
 
 function searchableText(record) {
