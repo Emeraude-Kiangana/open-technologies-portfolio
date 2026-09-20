@@ -33,6 +33,12 @@ export default function Home() {
               Explorer les projets
             </a>
             <a
+              href="/open-technologies-portfolio/support/"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Ask Open Technologies
+            </a>
+            <a
               href="https://github.com/Emeraude-Kiangana"
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +82,7 @@ export default function Home() {
               État vérifié des projets
             </h2>
             <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
-              Sept projets autorisés. Chaque carte sépare le statut du projet de la disponibilité
+              Huit projets autorisés. Chaque carte sépare le statut du projet de la disponibilité
               publique des preuves, et indique la date de dernière vérification.
             </p>
           </div>

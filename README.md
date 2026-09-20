@@ -96,6 +96,27 @@ npm run build
 
 The production build must generate the static export successfully before merge.
 
+## Ask Open Technologies
+
+P01-CP-SUPPORT-01 adds an evidence-grounded support layer over the portfolio.
+
+Contract:
+
+`NO EVIDENCE → NO CLAIM`
+
+The public `/support/` route always supports deterministic local retrieval over a bounded knowledge snapshot. An optional server-side endpoint may add Gemini with Groq fallback, but provider keys must remain server-side.
+
+Verification:
+
+```bash
+npm run test:support
+npm run scan:secrets
+```
+
+Architecture and provider boundaries: `docs/SUPPORT-ARCHITECTURE.md`.
+
+Current checkpoint state: **OPEN / IMPLEMENTED CANDIDATE** until a secure live serverless endpoint and live provider/fallback evidence are recorded.
+
 ## Deployment
 
 \`next.config.ts\` uses:
