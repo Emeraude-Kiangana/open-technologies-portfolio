@@ -53,7 +53,7 @@ export function deterministicAnswer(question, records) {
   } else {
     for (const record of records) {
       const verified = record.implemented_features.slice(0, 2).join(" ");
-      paragraphs.push(\`\${record.project_name} — \${record.status}. \${verified}\`);
+      paragraphs.push(`${record.project_name} — ${record.status}. ${verified}`);
       evidenceIds.push(...recordEvidenceIds(record));
       limitations.push(...record.known_limitations.slice(0, 2));
     }
