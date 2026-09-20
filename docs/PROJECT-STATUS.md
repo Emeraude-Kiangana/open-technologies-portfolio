@@ -1,6 +1,6 @@
 # P01 — Open Technologies Portfolio — Project Status
 
-Status date: **2026-09-19**
+Status date: **2026-09-20**
 
 ## Current phase
 
@@ -26,9 +26,9 @@ The pre-normalization repository name is historical only and is not an active ca
 | Unified Project Evidence Index | IMPLEMENTED | Historical P01-CP-HUB-02 merge `1b7274847d61a097155dc98e2377d58afd5e5c13` |
 | Project/evidence status separation | IMPLEMENTED | `src/data/projects.ts` + public index UI |
 | Source visibility separation | IMPLEMENTED | Explicit `PUBLIC` / `PRIVATE` field on every card |
-| Portfolio CI workflow | TESTED | Pre-resync main run `35468351208` = SUCCESS; final correction requires a newer post-merge SUCCESS |
-| GitHub Pages deploy workflow | TESTED | Pre-resync deploy run `35468351198` = SUCCESS; final correction requires a newer post-merge SUCCESS |
-| Pages build/deployment | TESTED | Pre-resync Pages run `35468391017` = SUCCESS; final correction requires a newer post-merge SUCCESS |
+| Portfolio CI workflow | TESTED | Normalization run `35468893760` = SUCCESS; current closure-pass validation must remain green |
+| GitHub Pages deploy workflow | TESTED | Normalization deploy `35468893825` = SUCCESS |
+| Pages build/deployment | TESTED | Normalization Pages run `35468916827` = SUCCESS |
 | Anonymous HTTP reachability | UNKNOWN | External clients could not complete GitHub Pages DNS/HTTP verification in this execution environment |
 
 ## Evidence model
@@ -73,12 +73,13 @@ The current normalization correction does **not** recreate HUB-02 and does not p
 |---|---|---|
 | CPCN | private `main@f98056fd5db26377545e0dc6549bfe47fd9d91af` | Global `DOCUMENTED`; G0-01 frozen field collection; G0-02 `DOCUMENTED / IMPLEMENTED / TESTED`; partial public evidence; external validation not claimed |
 | eCDF | public `main@c3a82329bdcd339a99595b64ea3a3dd4ee3adefa`; CI `35463718531` SUCCESS | `TESTED · PUBLIC`; 27/27 tests; Apache-2.0; no public demo; no live Stellar settlement |
-| KIANGANA 2.0 | public `main@d3790d349e45d794bbb78d46fc1c48862c678151`; current-main CI `35465319172` SUCCESS | Current main is `DOCUMENTED / IMPLEMENTED / TESTED / PUBLIC`; normalization PR #8 remains OPEN |
+| KIANGANA 2.0 | public `main@0f9829e54436ae860977c3d2b3349d74482258da`; normalization PR #8 CI `35465436732` SUCCESS | `DOCUMENTED / IMPLEMENTED / TESTED / PUBLIC`; product-normalization documentation is now canonical main |
 | KIF V0.2 CP-01 | proof `69d3c9a1fdfc9616700572011a466b549be0c867`; freeze `57c4bfc2664398383a784128a9fa03dc3e41c0e4`; live run `35286354669`; freeze run `35287044624` | Historical `REPRODUCIBLE`, CLOSED / FROZEN checkpoint; `kif/` is not present on current main |
 | NovaForge | private `main@74aa0bbbd7a9b4dceb0b987b27d2c670cac40903`; main CI `35464627769` SUCCESS | `REPRODUCIBLE`; v0.1.0-alpha; 100/100 regression + 1/1 E2E on reference release CI; public P01 proof assets exist; anonymous HTTP status UNKNOWN |
 | RegenTwin | public `main@fadf386ed5c62dcd45a66008e8b2989b6402b63f`; CI `35324672286` SUCCESS | `TESTED` Gate 0; 4 tests; no release version claimed; no license file detected |
 | RWA Red-Team Lab | public `main@922291ca7076ed871f70d6c70623c7b61541297e`; CI `35327731335` SUCCESS | `TESTED` deterministic Gate 0 verifier; 4 tests; no release version claimed; no license file detected |
-| P01 | public pre-resync `main@f42ea82913920285f443548d8f962cf07e5b2fbd` | Final state is accepted only after current PR CI, merge, deploy and Pages runs succeed |
+| C.A.O — Chief Agent Officer | private `main@991a5b7c93e17c6e2769732b59a81e9765aff61f`; CP-07 proof run `35479200779` SUCCESS | CP-01 → CP-07 CLOSED / TESTED — CI-BACKED; 95/95 full suite; deterministic mission-execution sandbox; reproducibility/public source not claimed |
+| P01 | public `main@bd5659b373b15699ae444217f9abdf97d85a5b74`; CI `35468893760`, deploy `35468893825`, Pages `35468916827` SUCCESS | Public evidence hub synchronized before the C.A.O closure pass |
 
 ## CPCN boundary
 
@@ -106,7 +107,7 @@ KIANGANA 2.0 and KIF must not be collapsed into one status.
 - live proof run `35286354669`: SUCCESS, 41 unit tests + 3 integration tests.
 - freeze run `35287044624`: SUCCESS, 41 unit tests and tracked-file secret hygiene CLEAN.
 - `kif/` is not present in a fresh checkout of current `main`.
-- PR #8 documentation is branch-only until merged and is not treated as canonical main.
+- PR #8 was merged as `main@0f9829e54436ae860977c3d2b3349d74482258da`; its normalized product documentation is now canonical.
 
 ## NovaForge public evidence boundary
 
@@ -118,6 +119,21 @@ The public P01 repository contains:
 - `src/app/projects/novaforge/page.tsx`.
 
 This proves the public **source package is present in P01**. It does not establish anonymous GitHub Pages HTTP reachability when the external HTTP client cannot complete the request.
+
+## C.A.O boundary
+
+C.A.O is a real tested private-source project and is now part of the canonical P01 index.
+
+- current main: `991a5b7c93e17c6e2769732b59a81e9765aff61f`;
+- kernel: v0.1;
+- current closed checkpoint: CP-07 Mission Execution;
+- proof run `35479200779`: SUCCESS;
+- full suite: 95/95 PASS;
+- public source: **NO**;
+- reproducible status: **NOT CLAIMED**;
+- production execution / live inter-agent messaging / arbitrary tools / marketplace: **NOT IMPLEMENTED**.
+
+P01 exposes only bounded status and evidence metadata; it does not publish C.A.O private source.
 
 ## P01 pre-resync baseline
 
