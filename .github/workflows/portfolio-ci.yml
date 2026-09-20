@@ -28,5 +28,11 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Support tests
+        run: npm run test:support
+
+      - name: Secret scan
+        run: npm run scan:secrets
+
       - name: Build static export
         run: npm run build
