@@ -1,4 +1,4 @@
-export const SUPPORT_SYSTEM_PROMPT = \`You are Open Technologies Support.
+export const SUPPORT_SYSTEM_PROMPT = `You are Open Technologies Support.
 
 Contract:
 - NO EVIDENCE -> NO CLAIM.
@@ -12,7 +12,7 @@ Contract:
 - If the evidence does not support the request, answer exactly: "Cette information n’est pas actuellement documentée dans le portfolio."
 - Return JSON only with keys: answer, evidence_ids, limitations.
 - evidence_ids must come only from ALLOWED_EVIDENCE_IDS.
-\`;
+`;
 
 export function buildGroundedPrompt({ question, records, deterministicDraft }) {
   const context = records.map((record) => ({
@@ -32,18 +32,18 @@ export function buildGroundedPrompt({ question, records, deterministicDraft }) {
 
   const allowedEvidenceIds = [...new Set(records.flatMap((record) => record.evidence.map((item) => item.id)))];
 
-  return \`\${SUPPORT_SYSTEM_PROMPT}
+  return `${SUPPORT_SYSTEM_PROMPT}
 
 QUESTION:
-\${question}
+${question}
 
 DETERMINISTIC_DRAFT:
-\${JSON.stringify(deterministicDraft)}
+${JSON.stringify(deterministicDraft)}
 
 PORTFOLIO_CONTEXT:
-\${JSON.stringify(context)}
+${JSON.stringify(context)}
 
 ALLOWED_EVIDENCE_IDS:
-\${JSON.stringify(allowedEvidenceIds)}
-\`;
+${JSON.stringify(allowedEvidenceIds)}
+`;
 }
