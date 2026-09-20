@@ -144,7 +144,7 @@ export const projects: ProjectEvidence[] = [
       {
         label: "KIANGANA 2.0 current main",
         statuses: ["DOCUMENTED", "IMPLEMENTED", "TESTED", "PUBLIC"],
-        note: "Canonical main is d3790d349e45d794bbb78d46fc1c48862c678151.",
+        note: "Canonical main is 0f9829e54436ae860977c3d2b3349d74482258da.",
       },
       {
         label: "KIF V0.2 CP-01",
@@ -160,8 +160,8 @@ export const projects: ProjectEvidence[] = [
     source: "Emeraude-Kiangana/kiangana-2.0",
     sourceHref: "https://github.com/Emeraude-Kiangana/kiangana-2.0",
     verifiedScope: [
-      "Current canonical main remains d3790d349e45d794bbb78d46fc1c48862c678151.",
-      "Current-main Gate Zero run 35465319172 completed successfully.",
+      "Current canonical main remains 0f9829e54436ae860977c3d2b3349d74482258da.",
+      "Normalization PR #8 CI run 35465436732 completed successfully before merge; normalized documentation is now on main.",
       "KIF V0.2 CP-01 is a REPRODUCIBLE historical checkpoint: proof 69d3c9a1fdfc9616700572011a466b549be0c867 → freeze 57c4bfc2664398383a784128a9fa03dc3e41c0e4 with one commit and zero file changes.",
       "KIF proof run 35286354669 passed 41 unit tests and 3 integration tests, including real DeepSeek, real Groq and fallback integration test files.",
       "KIF freeze run 35287044624 passed 41 unit tests and secret hygiene reported CLEAN.",
@@ -197,11 +197,11 @@ export const projects: ProjectEvidence[] = [
       },
     ],
     evidenceNote:
-      "Normalization PR #8 is still open. Its branch-only documentation is not treated as canonical main. KIF V0.2 exists in Git history and should not be assumed to be present in a fresh checkout of current main.",
+      "Normalization PR #8 was merged as main 0f9829e54436ae860977c3d2b3349d74482258da. KIF V0.2 remains a distinct historical checkpoint and should not be assumed to be present in a fresh checkout of current main.",
     limitations: [
       "KIF V0.2 reproducibility applies to that checkpoint, not to every KIANGANA 2.0 subsystem.",
       "Historical root Gate Zero run 35287044647 failed at the KIF freeze head; later current-main Gate Zero runs are green.",
-      "Open normalization PR #8 is pending and is not presented as merged canonical documentation.",
+      "KIF V0.2 remains historical and distinct from the current-main governance foundation.",
     ],
     lastVerified: "2026-09-19",
   },
@@ -341,6 +341,40 @@ export const projects: ProjectEvidence[] = [
     lastVerified: "2026-09-19",
   },
   {
+    name: "C.A.O — Chief Agent Officer",
+    description:
+      "Professional infrastructure prototype for verified AI talent, deterministic team assembly and authorized mission-execution sandboxing.",
+    projectStatus: ["DOCUMENTED", "IMPLEMENTED", "TESTED"],
+    statusBreakdown: [
+      {
+        label: "C.A.O Kernel v0.1 · CP-07",
+        statuses: ["DOCUMENTED", "IMPLEMENTED", "TESTED"],
+        note: "CP-01 through CP-07 are CLOSED / TESTED — CI-BACKED; reproducibility is not claimed.",
+      },
+    ],
+    publicEvidenceStatus: ["PARTIAL", "PRIVATE SOURCE"],
+    sourceVisibility: "PRIVATE",
+    version: "Kernel v0.1 · CP-07",
+    demo: "DETERMINISTIC SANDBOX · NO PUBLIC DEMO",
+    license: "No license currently granted",
+    source: "PRIVATE — Emeraude-Kiangana/chief-agent-officer",
+    verifiedScope: [
+      "Professional Contracts, Verified Registry, deterministic matching, Mission Requirements Compiler, Talent Graph, Network Discovery Boundary and Agent Team Assembly are closed checkpoints.",
+      "CP-07 Mission Execution is CLOSED / TESTED — CI-BACKED on main 991a5b7c93e17c6e2769732b59a81e9765aff61f.",
+      "CP-07 proof run 35479200779 completed successfully; the full suite reports 95 / 95 PASS.",
+      "The canonical sandbox records three ordered execution events, deterministic SHA-256 outputs, independent verification and a CLOSED Mission Record.",
+    ],
+    evidence: [],
+    evidenceNote:
+      "Canonical source is private. Verified source anchors: main 991a5b7c93e17c6e2769732b59a81e9765aff61f; CP-07 implementation 096abfeff80307517cd5eb92d06f69f762df4dbb; proof commit 5beccbe2d7d8d8b00b42c9c0b57241e1bd33922e; proof run 35479200779.",
+    limitations: [
+      "No live inter-agent messaging, arbitrary tool execution, live model-provider calls or external side effects are demonstrated.",
+      "Dynamic replanning, failure recovery, settlement, marketplace execution and production readiness are not implemented.",
+      "Private source limits anonymous inspection; TESTED does not imply REPRODUCIBLE or PUBLIC.",
+    ],
+    lastVerified: "2026-09-20",
+  },
+  {
     name: "P01 — Open Technologies Portfolio",
     description:
       "Public evidence index for technical projects built, tested and documented by Emeraude Kiangana.",
@@ -357,7 +391,7 @@ export const projects: ProjectEvidence[] = [
       "P01-CP-HUB-02 remains historical proof at merge 1b7274847d61a097155dc98e2377d58afd5e5c13.",
       "Pre-resync main f42ea82913920285f443548d8f962cf07e5b2fbd has Portfolio CI 35468351208, Deploy 35468351198 and Pages build 35468391017 all SUCCESS.",
       "Final resynchronization evidence is defined by the newer post-merge Actions history; no pre-merge run is treated as the final correction proof.",
-      "The unified evidence index presents exactly seven authorized projects.",
+      "The unified evidence index presents eight authorized project entries, including C.A.O.",
     ],
     evidence: [
       {
@@ -391,7 +425,7 @@ export const projects: ProjectEvidence[] = [
       "Repository visibility does not imply an open-source license.",
       "Anonymous GitHub Pages HTTP reachability is UNKNOWN in the current execution environment; deployment success is tracked separately.",
     ],
-    lastVerified: "2026-09-19",
+    lastVerified: "2026-09-20",
   },
 ];
 
