@@ -10,7 +10,7 @@ Public evidence index for technical projects built, tested and documented by Eme
 - Repository: **PUBLIC**
 - Live Portfolio: https://emeraude-kiangana.github.io/open-technologies-portfolio/
 - License: **No license currently granted**
-- Last project-evidence synchronization: **2026-09-19**
+- Last project-evidence synchronization: **2026-09-20**
 
 The Pages URL is configuration evidence until an external HTTP smoke test confirms anonymous reachability after the current normalization merge.
 
@@ -62,6 +62,7 @@ The unified public evidence index contains exactly:
 - NovaForge;
 - RegenTwin;
 - RWA Red-Team Lab;
+- C.A.O — Chief Agent Officer;
 - P01 — Open Technologies Portfolio.
 
 The application source of truth for normalized card data is \`src/data/projects.ts\`.
