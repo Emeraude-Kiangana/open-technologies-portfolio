@@ -20,14 +20,14 @@ export function scanTrackedFiles({ cwd = process.cwd() } = {}) {
   for (const path of tracked) {
     let stat;
     try {
-      stat = statSync(\`\${cwd}/\${path}\`);
+      stat = statSync(`${cwd}/${path}`);
     } catch {
       continue;
     }
 
     if (!stat.isFile() || stat.size > 1_000_000) continue;
 
-    const buffer = readFileSync(\`\${cwd}/\${path}\`);
+    const buffer = readFileSync(`${cwd}/${path}`);
     if (buffer.includes(0)) continue;
 
     const content = buffer.toString("utf8");
@@ -47,7 +47,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   if (findings.length > 0) {
     console.error("SECRET_SCAN=FAILED");
     for (const finding of findings) {
-      console.error(\`\${finding.path}: \${finding.pattern}\`);
+      console.error(`${finding.path}: ${finding.pattern}`);
     }
     process.exit(1);
   }
