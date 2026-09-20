@@ -17,7 +17,6 @@ function searchableText(record) {
   return normalize(
     [
       record.project_name,
-      record.description,
       record.status,
       ...record.aliases,
       ...record.maturity,
@@ -59,6 +58,7 @@ export function scoreRecord(question, record) {
     if (record.implemented_features.some((item) => normalize(item).includes(token))) score += 2;
   }
 
+  if (/\b(what has emeraude|what did emeraude|actually built|has emeraude.*built)\b/.test(q)) score += 6;
   if (/\b(test|tests|tested|automated)\b/.test(q) && hasTestedCheckpoint(record)) score += 9;
   if (/\breproduc/.test(q) && record.maturity.includes("REPRODUCIBLE")) score += 9;
   if (/\b(field|terrain|external validation|validation terrain)\b/.test(q) && record.field_validation !== "NONE") {
