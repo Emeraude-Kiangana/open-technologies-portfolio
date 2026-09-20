@@ -34,13 +34,13 @@ export function validateKnowledgeRecord(record) {
 
   for (const field of requiredStringFields) {
     if (typeof record?.[field] !== "string" || record[field].trim() === "") {
-      errors.push(\`\${field} must be a non-empty string\`);
+      errors.push(`${field} must be a non-empty string`);
     }
   }
 
   for (const field of requiredArrayFields) {
     if (!Array.isArray(record?.[field])) {
-      errors.push(\`\${field} must be an array\`);
+      errors.push(`${field} must be an array`);
     }
   }
 
@@ -75,16 +75,16 @@ export function validateKnowledgeBase(records) {
 
   for (const record of records) {
     const recordErrors = validateKnowledgeRecord(record);
-    errors.push(...recordErrors.map((error) => \`\${record.project_id ?? "unknown"}: \${error}\`));
+    errors.push(...recordErrors.map((error) => `${record.project_id ?? "unknown"}: ${error}`));
 
     if (projectIds.has(record.project_id)) {
-      errors.push(\`duplicate project_id: \${record.project_id}\`);
+      errors.push(`duplicate project_id: ${record.project_id}`);
     }
     projectIds.add(record.project_id);
 
     for (const evidence of record.evidence ?? []) {
       if (evidenceIds.has(evidence.id)) {
-        errors.push(\`duplicate evidence id: \${evidence.id}\`);
+        errors.push(`duplicate evidence id: ${evidence.id}`);
       }
       evidenceIds.add(evidence.id);
     }
