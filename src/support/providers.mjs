@@ -45,7 +45,7 @@ export function createGeminiProvider({
       if (!apiKey) return { ok: false, provider: "gemini", reason: "missing_api_key" };
       try {
         const response = await fetchImpl(
-          \`https://generativelanguage.googleapis.com/v1beta/models/\${encodeURIComponent(model)}?key=\${encodeURIComponent(apiKey)}\`,
+          `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}?key=${encodeURIComponent(apiKey)}`,
         );
         return { ok: response.ok, provider: "gemini", status: response.status };
       } catch {
@@ -58,7 +58,7 @@ export function createGeminiProvider({
       let response;
       try {
         response = await fetchImpl(
-          \`https://generativelanguage.googleapis.com/v1beta/models/\${encodeURIComponent(model)}:generateContent?key=\${encodeURIComponent(apiKey)}\`,
+          `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`,
           {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -72,12 +72,12 @@ export function createGeminiProvider({
           },
         );
       } catch (error) {
-        throw new ProviderUnavailableError(\`Gemini network failure: \${error.message}\`, { provider: "gemini" });
+        throw new ProviderUnavailableError(`Gemini network failure: ${error.message}`, { provider: "gemini" });
       }
 
       if (!response.ok) {
         const ErrorType = unavailableStatus(response.status) ? ProviderUnavailableError : ProviderRequestError;
-        throw new ErrorType(\`Gemini request failed with HTTP \${response.status}\`, {
+        throw new ErrorType(`Gemini request failed with HTTP ${response.status}`, {
           provider: "gemini",
           status: response.status,
         });
@@ -103,7 +103,7 @@ export function createGroqProvider({
       if (!apiKey) return { ok: false, provider: "groq", reason: "missing_api_key" };
       try {
         const response = await fetchImpl("https://api.groq.com/openai/v1/models", {
-          headers: { authorization: \`Bearer \${apiKey}\` },
+          headers: { authorization: `Bearer ${apiKey}` },
         });
         return { ok: response.ok, provider: "groq", status: response.status };
       } catch {
@@ -118,7 +118,7 @@ export function createGroqProvider({
         response = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", {
           method: "POST",
           headers: {
-            authorization: \`Bearer \${apiKey}\`,
+            authorization: `Bearer ${apiKey}`,
             "content-type": "application/json",
           },
           body: JSON.stringify({
@@ -134,12 +134,12 @@ export function createGroqProvider({
           }),
         });
       } catch (error) {
-        throw new ProviderUnavailableError(\`Groq network failure: \${error.message}\`, { provider: "groq" });
+        throw new ProviderUnavailableError(`Groq network failure: ${error.message}`, { provider: "groq" });
       }
 
       if (!response.ok) {
         const ErrorType = unavailableStatus(response.status) ? ProviderUnavailableError : ProviderRequestError;
-        throw new ErrorType(\`Groq request failed with HTTP \${response.status}\`, {
+        throw new ErrorType(`Groq request failed with HTTP ${response.status}`, {
           provider: "groq",
           status: response.status,
         });
