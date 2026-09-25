@@ -31,6 +31,9 @@ jobs:
       - name: Support tests
         run: npm run test:support
 
+      - name: Freelance service proof tests
+        run: npm run test:freelance-proofs
+
       - name: Secret scan
         run: npm run scan:secrets
 
