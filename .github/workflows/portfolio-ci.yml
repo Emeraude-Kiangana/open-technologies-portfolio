@@ -46,6 +46,9 @@ jobs:
       - name: Validate conversion layer
         run: npm run validate:conversion
 
+      - name: Validate SEO and discoverability
+        run: npm run validate:seo
+
       - name: Secret scan
         run: npm run scan:secrets
 
