@@ -124,8 +124,9 @@ Boundary: all four are internal projects or technical proofs. No paying customer
 
 ### P01-CP-FREELANCE-05 — Client Intake
 
-**Status: IMPLEMENTED CANDIDATE / CI GATED**
+**Status: CLOSED / TESTED / PUBLIC / DEPLOYED**
 
+- implementation merge `31d8859a52050a0cbd2f7f3d7ec4c0a9dadd8454`;
 - Tool-first provider: Tally;
 - published form ID `PdK4ex`;
 - P01 static route `/intake/`;
@@ -133,9 +134,12 @@ Boundary: all four are internal projects or technical proofs. No paying customer
 - no file upload;
 - explicit secret-data rejection;
 - custom backend not required;
-- external intake cost classified at #0$ for the core flow.
+- external intake cost classified at #0$ for the core flow;
+- post-merge Portfolio CI `36172078729` = SUCCESS;
+- proof-pack regression `36172078618` = SUCCESS;
+- GitHub Pages deploy `36172078488` = SUCCESS.
 
-Closure is not claimed until the PR CI, static export and post-merge Pages deployment are green.
+Boundary: intake submission is not a contract, not authorization for paid work, and does not relax the external-cost or secret-handling rules.
 
 ## Current source synchronization
 
