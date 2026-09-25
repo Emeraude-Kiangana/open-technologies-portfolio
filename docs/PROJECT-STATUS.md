@@ -122,6 +122,21 @@ Commercial boundary: these are launch offers, not market-rate claims, SLA guaran
 
 Boundary: all four are internal projects or technical proofs. No paying customer, testimonial or commercial adoption is claimed.
 
+### P01-CP-FREELANCE-05 — Client Intake
+
+**Status: IMPLEMENTED CANDIDATE / CI GATED**
+
+- Tool-first provider: Tally;
+- published form ID `PdK4ex`;
+- P01 static route `/intake/`;
+- service/package attribution via hidden fields;
+- no file upload;
+- explicit secret-data rejection;
+- custom backend not required;
+- external intake cost classified at #0$ for the core flow.
+
+Closure is not claimed until the PR CI, static export and post-merge Pages deployment are green.
+
 ## Current source synchronization
 
 | Project | Canonical source state | Current interpretation |
