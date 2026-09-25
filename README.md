@@ -177,6 +177,20 @@ npm run validate:intake
 
 Architecture and #0$ boundary: `docs/FREELANCE-CLIENT-INTAKE.md`.
 
+## Freelance Conversion Layer
+
+P01 uses a single canonical commercial action: `Start a project`.
+
+The conversion layer adds data-derived trust signals, bounded fast-start routes and repeated intake entry points while keeping public proof one click away.
+
+Validation:
+
+```bash
+npm run validate:conversion
+```
+
+Architecture and claim boundary: `docs/FREELANCE-CONVERSION.md`.
+
 ## Ask Open Technologies
 
 P01-CP-SUPPORT-01 adds an evidence-grounded support layer over the portfolio.
