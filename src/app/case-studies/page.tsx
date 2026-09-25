@@ -1,3 +1,4 @@
+import { ConversionCTA } from "@/components/FreelanceConversion";
 import { caseStudies } from "@/data/case-studies";
 
 function typeClasses(type: string) {
@@ -141,27 +142,13 @@ export default function CaseStudiesPage() {
           </div>
         </section>
 
-        <section className="border-t border-zinc-800 py-12">
-          <h2 className="text-3xl font-bold">Du cas de référence à la mission</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
-            Les case studies prouvent une méthode et un scope technique. Une mission client reste
-            re-scopée selon son environnement, ses accès, ses coûts externes et son test d&apos;acceptation.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href="/open-technologies-portfolio/services/"
-              className="inline-block rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white"
-            >
-              Voir les offres freelance
-            </a>
-            <a
-              href="/open-technologies-portfolio/intake/"
-              className="inline-block rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900"
-            >
-              Décrire une mission
-            </a>
-          </div>
-        </section>
+        <div className="border-t border-zinc-800 py-12">
+          <ConversionCTA
+            source="case-studies-bottom"
+            title="Une référence ressemble à ton problème ?"
+            body="Utilise l’intake pour décrire ton environnement réel. La référence sert de preuve de méthode, pas de promesse que deux projets sont identiques."
+          />
+        </div>
       </div>
     </main>
   );

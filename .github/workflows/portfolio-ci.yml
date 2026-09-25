@@ -43,6 +43,9 @@ jobs:
       - name: Validate client intake
         run: npm run validate:intake
 
+      - name: Validate conversion layer
+        run: npm run validate:conversion
+
       - name: Secret scan
         run: npm run scan:secrets
 

@@ -27,6 +27,21 @@ export default function IntakePage() {
         </section>
 
         <section className="border-t border-zinc-800 py-10">
+          <div className="grid gap-3 sm:grid-cols-3">
+            {[
+              ["$0", "frais pour soumettre l’intake"],
+              ["0", "paiement demandé à cette étape"],
+              ["0", "secret ou fichier confidentiel à envoyer"],
+            ].map(([value, label]) => (
+              <div key={label} className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
+                <p className="text-2xl font-bold">{value}</p>
+                <p className="mt-1 text-sm leading-5 text-zinc-400">{label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="border-t border-zinc-800 py-10">
           <h2 className="text-2xl font-bold">Ce formulaire ne crée pas encore de contrat</h2>
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
             <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
