@@ -31,6 +31,7 @@ The pre-normalization repository name is historical only and is not an active ca
 | Freelance Tool-First Service Layer | IMPLEMENTED / PUBLIC | 8 canonical services in `src/data/services.ts` |
 | Freelance Service Proof Packs | TESTED / PUBLIC | Dedicated workflow `36167307880` = SUCCESS |
 | Freelance Offer Packaging | TESTED / PUBLIC | 24 bounded packages in `src/data/offers.json`; validator included in Portfolio CI |
+| Freelance Case Studies | TESTED / PUBLIC | 4 evidence-backed internal/reference cases; validator included in Portfolio CI |
 | Anonymous HTTP reachability | UNKNOWN | External clients could not complete GitHub Pages DNS/HTTP verification in this execution environment |
 
 ## Evidence model
@@ -103,6 +104,23 @@ The current normalization correction does **not** recreate HUB-02 and does not p
 - GitHub Pages deploy `36167307873` = SUCCESS.
 
 Commercial boundary: these are launch offers, not market-rate claims, SLA guarantees, production certification or evidence of paid-client history.
+
+### P01-CP-FREELANCE-04 — Case Studies
+
+**Status: CLOSED / TESTED / PUBLIC / DEPLOYED**
+
+- implementation merge `8c75583cbd8f9ba8bc0df998356d0180a88ffba6`;
+- four canonical evidence-backed reference narratives;
+- NovaForge media pipeline;
+- KIF V0.2 provider/fallback;
+- eCDF deterministic lifecycle;
+- P01 Service Proof Packs;
+- case-study validator included in Portfolio CI;
+- post-merge Portfolio CI `36169741154` = SUCCESS;
+- proof-pack regression run `36169741119` = SUCCESS;
+- GitHub Pages deploy `36169741088` = SUCCESS.
+
+Boundary: all four are internal projects or technical proofs. No paying customer, testimonial or commercial adoption is claimed.
 
 ## Current source synchronization
 
