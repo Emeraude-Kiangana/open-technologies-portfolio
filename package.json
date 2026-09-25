@@ -11,7 +11,8 @@
     "scan:secrets": "node scripts/scan-secrets.mjs",
     "test:freelance-proofs": "node --test proofs/freelance/api-automation/adapter.test.mjs proofs/freelance/backend-prototype/server.test.mjs",
     "validate:offers": "node scripts/validate-offers.mjs",
-    "validate:case-studies": "node scripts/validate-case-studies.mjs"
+    "validate:case-studies": "node scripts/validate-case-studies.mjs",
+    "validate:intake": "node scripts/validate-intake.mjs"
   },
   "dependencies": {
     "next": "16.3.4",

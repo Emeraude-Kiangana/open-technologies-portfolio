@@ -1,17 +1,10 @@
 import offersData from "@/data/offers.json";
+import { buildIntakeUrl } from "@/data/intake";
 import { freelanceServices } from "@/data/services";
 
 const offersByService = new Map(
   offersData.services.map((entry) => [entry.slug, entry.packages]),
 );
-
-function quoteHref(service: string, tier: string, packageName: string) {
-  const subject = encodeURIComponent(`Freelance quote — ${service} — ${tier}`);
-  const body = encodeURIComponent(
-    `Hello Emeraude,\n\nI am interested in: ${service} / ${tier} — ${packageName}.\n\nMy project:\nExpected result:\nDeadline:\nRelevant links:\n\nPlease confirm scope, external costs and acceptance criteria before starting.`,
-  );
-  return `mailto:Emeraude-Kiangana@proton.me?subject=${subject}&body=${body}`;
-}
 
 function proofClasses(state: string) {
   if (state === "PUBLIC PROOF") return "border-emerald-800/60 bg-emerald-950/30 text-emerald-200";
@@ -47,10 +40,10 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="mailto:Emeraude-Kiangana@proton.me?subject=Mission%20freelance%20Open%20Technologies"
+              href="/open-technologies-portfolio/intake/"
               className="rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white"
             >
-              Proposer une mission
+              Décrire une mission
             </a>
             <a
               href="/open-technologies-portfolio/case-studies/"
@@ -232,7 +225,14 @@ export default function ServicesPage() {
                           {offer.revisions} revision{offer.revisions === 1 ? "" : "s"} incluse{offer.revisions === 1 ? "" : "s"}
                         </p>
                         <a
-                          href={quoteHref(service.title, offer.tier, offer.name)}
+                          href={buildIntakeUrl({
+                            source: "p01-services",
+                            service: service.slug,
+                            packageTier: offer.tier,
+                            campaign: "service-package",
+                          })}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="rounded-lg bg-zinc-100 px-3 py-2 text-sm font-semibold text-zinc-950 hover:bg-white"
                         >
                           Demander ce package

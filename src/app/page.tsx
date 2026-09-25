@@ -39,6 +39,12 @@ export default function Home() {
               Case studies
             </a>
             <a
+              href="/open-technologies-portfolio/intake/"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Start a project
+            </a>
+            <a
               href="#project-index"
               className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
