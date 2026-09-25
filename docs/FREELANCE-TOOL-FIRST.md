@@ -88,3 +88,16 @@ They close the previous public-evidence gap for:
 The proof state is valid only when the dedicated GitHub Actions workflow is green on the exact commit being merged.
 
 The packs remain bounded demonstrations. They do not claim paid client delivery, production scale, external security certification or compatibility with every third-party service.
+
+
+## P01-CP-FREELANCE-03 — Offer Packaging
+
+Commercial packages are stored in `src/data/offers.json` and validated by `scripts/validate-offers.mjs`.
+
+Each of the eight services exposes exactly three bounded tiers:
+
+`STARTER → STANDARD → ADVANCED`
+
+Every package must define price, target delivery window, revisions, scope, deliverables, exclusions and acceptance gates.
+
+Pricing doctrine and change-control rules: `docs/FREELANCE-OFFERS.md`.
