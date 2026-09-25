@@ -34,6 +34,9 @@ jobs:
       - name: Freelance service proof tests
         run: npm run test:freelance-proofs
 
+      - name: Validate freelance offers
+        run: npm run validate:offers
+
       - name: Secret scan
         run: npm run scan:secrets
 
