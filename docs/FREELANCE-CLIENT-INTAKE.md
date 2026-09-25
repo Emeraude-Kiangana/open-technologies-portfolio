@@ -1,6 +1,6 @@
 # P01-CP-FREELANCE-05 — Client Intake
 
-Status: **CANDIDATE — CI GATED**
+Status: **CLOSED · TESTED · PUBLIC · DEPLOYED**
 
 ## Mission
 
@@ -95,3 +95,27 @@ CP05 closes only when:
 - secret scan passes;
 - post-merge Portfolio CI passes;
 - GitHub Pages deploy passes.
+
+
+## Closure evidence
+
+Implementation merge on `main`:
+
+`31d8859a52050a0cbd2f7f3d7ec4c0a9dadd8454`
+
+Post-merge verification on that exact commit:
+
+- Portfolio CI `36172078729` — **SUCCESS**;
+- Freelance Service Proof Packs `36172078618` — **SUCCESS**;
+- GitHub Pages deploy `36172078488` — **SUCCESS**.
+
+Closure interpretation:
+
+- Tally form `PdK4ex` is published;
+- P01 exposes `/intake/`;
+- package CTAs pass source/service/package/campaign attribution;
+- no custom backend is required;
+- intake validation is part of Portfolio CI;
+- core intake path remains classified at external cost `$0`.
+
+Tally Pro-only owner-email customization, metadata and advanced published styling remain outside CP05 and are not required for closure.
