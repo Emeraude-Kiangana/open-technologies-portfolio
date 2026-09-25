@@ -26,13 +26,14 @@ The pre-normalization repository name is historical only and is not an active ca
 | Unified Project Evidence Index | IMPLEMENTED | Historical P01-CP-HUB-02 merge `1b7274847d61a097155dc98e2377d58afd5e5c13` |
 | Project/evidence status separation | IMPLEMENTED | `src/data/projects.ts` + public index UI |
 | Source visibility separation | IMPLEMENTED | Explicit `PUBLIC` / `PRIVATE` field on every card |
-| Portfolio CI workflow | TESTED | CP03 post-merge run `36167308078` = SUCCESS |
-| GitHub Pages deploy workflow | TESTED | CP03 post-merge deploy `36167307873` = SUCCESS |
+| Portfolio CI workflow | TESTED | CP07 post-merge run `36175726957` = SUCCESS |
+| GitHub Pages deploy workflow | TESTED | CP07 post-merge deploy `36175726911` = SUCCESS |
 | Freelance Tool-First Service Layer | IMPLEMENTED / PUBLIC | 8 canonical services in `src/data/services.ts` |
 | Freelance Service Proof Packs | TESTED / PUBLIC | Dedicated workflow `36167307880` = SUCCESS |
 | Freelance Offer Packaging | TESTED / PUBLIC | 24 bounded packages in `src/data/offers.json`; validator included in Portfolio CI |
 | Freelance Case Studies | TESTED / PUBLIC | 4 evidence-backed internal/reference cases; validator included in Portfolio CI |
 | Freelance Conversion Layer | TESTED / DEPLOYED | Data-derived trust signals, canonical intake CTA and conversion validator; anonymous HTTP reachability not independently re-verified |
+| Freelance SEO + Discoverability | TESTED / DEPLOYED | Canonicals, route metadata, sitemap, index policy, JSON-LD and SEO validator |
 | Anonymous HTTP reachability | UNKNOWN | External clients could not complete GitHub Pages DNS/HTTP verification in this execution environment |
 
 ## Evidence model
@@ -161,17 +162,20 @@ Boundary: CP06 does not claim a measured conversion-rate improvement, customer d
 
 ### P01-CP-FREELANCE-07 — SEO + Discoverability
 
-**Status: IMPLEMENTED CANDIDATE / CI GATED**
+**Status: CLOSED / TESTED / DEPLOYED**
 
+- implementation merge `ff134606116fba5061ddc23e142735c3dbd35122`;
 - route-specific metadata and canonical URLs;
 - Open Graph / Twitter metadata on core surfaces;
 - sitemap for intended indexable pages;
 - `noindex, follow` on intake/support;
 - bounded Person + WebSite schema.org JSON-LD;
-- SEO validator added to Portfolio CI;
-- no claim of search-engine indexing, ranking or organic traffic.
+- SEO validator included in Portfolio CI;
+- post-merge Portfolio CI `36175726957` = SUCCESS;
+- proof-pack regression `36175726934` = SUCCESS;
+- GitHub Pages deploy `36175726911` = SUCCESS.
 
-Closure requires PR CI, static export and post-merge GitHub Pages deployment to pass.
+Boundary: CP07 does not claim search-engine indexing, ranking, organic traffic, backlinks, CTR improvement or Search Console ownership.
 
 ## Current source synchronization
 
