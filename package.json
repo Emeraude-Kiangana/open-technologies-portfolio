@@ -12,7 +12,8 @@
     "test:freelance-proofs": "node --test proofs/freelance/api-automation/adapter.test.mjs proofs/freelance/backend-prototype/server.test.mjs",
     "validate:offers": "node scripts/validate-offers.mjs",
     "validate:case-studies": "node scripts/validate-case-studies.mjs",
-    "validate:intake": "node scripts/validate-intake.mjs"
+    "validate:intake": "node scripts/validate-intake.mjs",
+    "validate:conversion": "node scripts/validate-conversion.mjs"
   },
   "dependencies": {
     "next": "16.3.4",
