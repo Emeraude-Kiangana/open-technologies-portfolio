@@ -33,6 +33,12 @@ export default function Home() {
               Services freelance
             </a>
             <a
+              href="/open-technologies-portfolio/case-studies/"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Case studies
+            </a>
+            <a
               href="#project-index"
               className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
@@ -93,6 +99,12 @@ export default function Home() {
               className="rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
               Voir les 8 services
+            </a>
+            <a
+              href="/open-technologies-portfolio/case-studies/"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Voir les références
             </a>
             <a
               href="mailto:Emeraude-Kiangana@proton.me?subject=Mission%20freelance%20Open%20Technologies"

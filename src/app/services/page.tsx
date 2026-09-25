@@ -53,6 +53,12 @@ export default function ServicesPage() {
               Proposer une mission
             </a>
             <a
+              href="/open-technologies-portfolio/case-studies/"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900"
+            >
+              Voir les case studies
+            </a>
+            <a
               href="https://github.com/Emeraude-Kiangana"
               target="_blank"
               rel="noopener noreferrer"

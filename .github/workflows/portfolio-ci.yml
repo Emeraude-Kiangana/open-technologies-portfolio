@@ -37,6 +37,9 @@ jobs:
       - name: Validate freelance offers
         run: npm run validate:offers
 
+      - name: Validate case studies
+        run: npm run validate:case-studies
+
       - name: Secret scan
         run: npm run scan:secrets
 

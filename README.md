@@ -128,6 +128,32 @@ Canonical package data: `src/data/offers.json`.
 
 All eight services now have bounded public technical proof. This does not imply paid-client experience, production scale, SLA guarantees or certification.
 
+
+## Freelance Case Studies
+
+P01 exposes evidence-backed reference narratives at:
+
+`/case-studies/`
+
+Current canonical cases:
+
+- NovaForge — reproducible FFmpeg media pipeline;
+- KIANGANA 2.0 / KIF V0.2 — dual-provider API routing with fallback;
+- eCDF — deterministic lifecycle with CI-backed evidence;
+- P01 Service Proof Packs — API Automation, Backend Prototype and Dockerisation.
+
+Case studies are explicitly labelled `INTERNAL PROJECT` or `TECHNICAL PROOF`. They are not client testimonials and do not imply paid-client delivery.
+
+Canonical data: `src/data/case-studies.ts`.
+
+Validation:
+
+```bash
+npm run validate:case-studies
+```
+
+Architecture and claim boundary: `docs/FREELANCE-CASE-STUDIES.md`.
+
 ## Ask Open Technologies
 
 P01-CP-SUPPORT-01 adds an evidence-grounded support layer over the portfolio.
