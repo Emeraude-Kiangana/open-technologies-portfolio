@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "18080:8080"
+    environment:
+      PORT: "8080"
+    restart: "no"
