@@ -191,6 +191,21 @@ npm run validate:conversion
 
 Architecture and claim boundary: `docs/FREELANCE-CONVERSION.md`.
 
+
+## SEO + Discoverability
+
+P01 uses route-specific metadata, absolute canonical URLs, Open Graph metadata, a project sitemap and bounded schema.org JSON-LD.
+
+Indexed surfaces are limited to content/reference pages. Transactional `/intake/` and assisted `/support/` routes use `noindex, follow`.
+
+Validation:
+
+```bash
+npm run validate:seo
+```
+
+Architecture and GitHub Pages boundary: `docs/FREELANCE-SEO.md`.
+
 ## Ask Open Technologies
 
 P01-CP-SUPPORT-01 adds an evidence-grounded support layer over the portfolio.
