@@ -1,3 +1,4 @@
+import { ConversionCTA, FreelanceTrustStrip } from "@/components/FreelanceConversion";
 import {
   evidenceLegend,
   maturityLegend,
@@ -27,8 +28,14 @@ export default function Home() {
             aria-label="Navigation principale"
           >
             <a
-              href="/open-technologies-portfolio/services/"
+              href="/open-technologies-portfolio/intake/?source=homepage-hero"
               className="rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Start a project
+            </a>
+            <a
+              href="/open-technologies-portfolio/services/"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
               Services freelance
             </a>
@@ -37,12 +44,6 @@ export default function Home() {
               className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
               Case studies
-            </a>
-            <a
-              href="/open-technologies-portfolio/intake/"
-              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              Start a project
             </a>
             <a
               href="#project-index"
@@ -64,14 +65,12 @@ export default function Home() {
             >
               GitHub
             </a>
-            <a
-              href="mailto:Emeraude-Kiangana@proton.me"
-              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              Contact
-            </a>
           </nav>
         </section>
+
+        <div className="pb-10">
+          <FreelanceTrustStrip />
+        </div>
 
         <section className="border-t border-zinc-800 py-10" aria-labelledby="philosophy-title">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
@@ -113,13 +112,17 @@ export default function Home() {
               Voir les références
             </a>
             <a
-              href="mailto:Emeraude-Kiangana@proton.me?subject=Mission%20freelance%20Open%20Technologies"
+              href="/open-technologies-portfolio/intake/?source=homepage-freelance"
               className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
-              Proposer une mission
+              Start a project
             </a>
           </div>
         </section>
+
+        <div className="border-t border-zinc-800 py-12">
+          <ConversionCTA source="homepage-before-projects" />
+        </div>
 
         <section
           id="project-index"
