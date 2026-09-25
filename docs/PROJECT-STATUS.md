@@ -159,6 +159,20 @@ Boundary: intake submission is not a contract, not authorization for paid work, 
 
 Boundary: CP06 does not claim a measured conversion-rate improvement, customer demand or paid-client history. External anonymous HTTP verification remains UNKNOWN in this execution environment.
 
+### P01-CP-FREELANCE-07 — SEO + Discoverability
+
+**Status: IMPLEMENTED CANDIDATE / CI GATED**
+
+- route-specific metadata and canonical URLs;
+- Open Graph / Twitter metadata on core surfaces;
+- sitemap for intended indexable pages;
+- `noindex, follow` on intake/support;
+- bounded Person + WebSite schema.org JSON-LD;
+- SEO validator added to Portfolio CI;
+- no claim of search-engine indexing, ranking or organic traffic.
+
+Closure requires PR CI, static export and post-merge GitHub Pages deployment to pass.
+
 ## Current source synchronization
 
 | Project | Canonical source state | Current interpretation |
