@@ -96,6 +96,34 @@ npm run build
 
 The production build must generate the static export successfully before merge.
 
+
+## Freelance Tool-First Services
+
+P01 now exposes a bounded freelance service layer at:
+
+`/services/`
+
+The catalog covers:
+
+- API Automation;
+- GitHub Setup;
+- GitHub Actions CI/CD;
+- FFmpeg Automation;
+- Dockerisation;
+- Backend Prototypes;
+- Technical Audits;
+- Technical Documentation.
+
+Each service records:
+
+`CLIENT PROBLEM → TOOL-FIRST ROUTE → DELIVERABLE → ACCEPTANCE TEST → PUBLIC PROOF`
+
+Canonical service data: `src/data/services.ts`.
+
+Commercial architecture and evidence boundary: `docs/FREELANCE-TOOL-FIRST.md`.
+
+P01 does not convert a partial proof into a global capability claim. Services with incomplete public evidence remain explicitly marked `PARTIAL PROOF`.
+
 ## Ask Open Technologies
 
 P01-CP-SUPPORT-01 adds an evidence-grounded support layer over the portfolio.
