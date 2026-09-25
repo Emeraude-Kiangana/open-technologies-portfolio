@@ -1,3 +1,4 @@
+import { ConversionCTA, FreelanceTrustStrip } from "@/components/FreelanceConversion";
 import offersData from "@/data/offers.json";
 import { buildIntakeUrl } from "@/data/intake";
 import { freelanceServices } from "@/data/services";
@@ -5,6 +6,8 @@ import { freelanceServices } from "@/data/services";
 const offersByService = new Map(
   offersData.services.map((entry) => [entry.slug, entry.packages]),
 );
+
+const fastStartSlugs = ["github-setup", "api-automation", "ffmpeg-automation"] as const;
 
 function proofClasses(state: string) {
   if (state === "PUBLIC PROOF") return "border-emerald-800/60 bg-emerald-950/30 text-emerald-200";
@@ -59,6 +62,51 @@ export default function ServicesPage() {
             >
               Vérifier sur GitHub
             </a>
+          </div>
+        </section>
+
+        <div className="pb-10">
+          <FreelanceTrustStrip />
+        </div>
+
+        <section className="border-t border-zinc-800 py-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
+            Fast start
+          </p>
+          <h2 className="mt-2 text-3xl font-bold">Commencer par une mission bornée</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
+            Trois raccourcis vers des scopes simples à examiner. Ce ne sont pas des classements :
+            chaque mission reste re-scopée avant acceptation.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {fastStartSlugs.map((slug) => {
+              const service = freelanceServices.find((item) => item.slug === slug);
+              const entry = offersData.services.find((item) => item.slug === slug);
+              const starter = entry?.packages[0];
+              if (!service || !starter) return null;
+
+              return (
+                <article key={slug} className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
+                  <p className="text-sm font-semibold text-zinc-400">{service.title}</p>
+                  <p className="mt-2 text-2xl font-bold">${starter.priceUsd}</p>
+                  <p className="mt-1 text-xs text-zinc-500">{starter.deliveryTarget} · STARTER</p>
+                  <p className="mt-4 text-sm leading-6 text-zinc-300">{service.outcome}</p>
+                  <a
+                    href={buildIntakeUrl({
+                      source: "p01-fast-start",
+                      service: slug,
+                      packageTier: "STARTER",
+                      campaign: "conversion-fast-start",
+                    })}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-block rounded-lg bg-zinc-100 px-3 py-2 text-sm font-semibold text-zinc-950 hover:bg-white"
+                  >
+                    Décrire cette mission
+                  </a>
+                </article>
+              );
+            })}
           </div>
         </section>
 
@@ -269,6 +317,10 @@ export default function ServicesPage() {
             ))}
           </div>
         </section>
+
+        <div className="border-t border-zinc-800 py-12">
+          <ConversionCTA source="services-bottom" />
+        </div>
 
         <section className="border-t border-zinc-800 py-12">
           <h2 className="text-3xl font-bold">Règle commerciale</h2>
