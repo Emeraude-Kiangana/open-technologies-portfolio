@@ -1,6 +1,6 @@
 # P01-CP-FREELANCE-06 — Conversion Layer
 
-Status: **CANDIDATE — CI GATED**
+Status: **CLOSED · TESTED · DEPLOYED**
 
 ## Mission
 
@@ -82,3 +82,40 @@ CP06 closes only if:
 - `npm run validate:conversion` passes;
 - lint/tests/secret scan/static export pass;
 - post-merge GitHub Pages deploy passes.
+
+
+## Closure evidence
+
+Implementation merge on `main`:
+
+`b907577c84eebc80d4c9b648abe9c224eae6fd1c`
+
+Post-merge verification on that exact commit:
+
+- Portfolio CI `36173060057` — **SUCCESS**;
+- Freelance Service Proof Packs `36173060012` — **SUCCESS**;
+- GitHub Pages deploy `36173059974` — **SUCCESS**.
+
+Portfolio CI verified:
+
+- lint;
+- support tests;
+- freelance service proof tests;
+- offer validation;
+- case-study validation;
+- client-intake validation;
+- conversion-layer validation;
+- tracked-file secret scan;
+- static export build.
+
+Closure interpretation:
+
+- one canonical commercial CTA routes to structured intake;
+- trust signals are computed from canonical data;
+- fast-start routes resolve to existing services and packages;
+- primary commercial surfaces no longer rely on stale `mailto:` CTAs;
+- proof and case-study paths remain visible alongside conversion CTAs.
+
+External HTTP verification note:
+
+The GitHub Pages deployment workflow succeeded, but the external HTTP client available in this execution environment could not access the GitHub Pages URLs. Anonymous reachability therefore remains recorded as `UNKNOWN` rather than being independently re-claimed by CP06.

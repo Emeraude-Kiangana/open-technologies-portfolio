@@ -32,6 +32,7 @@ The pre-normalization repository name is historical only and is not an active ca
 | Freelance Service Proof Packs | TESTED / PUBLIC | Dedicated workflow `36167307880` = SUCCESS |
 | Freelance Offer Packaging | TESTED / PUBLIC | 24 bounded packages in `src/data/offers.json`; validator included in Portfolio CI |
 | Freelance Case Studies | TESTED / PUBLIC | 4 evidence-backed internal/reference cases; validator included in Portfolio CI |
+| Freelance Conversion Layer | TESTED / DEPLOYED | Data-derived trust signals, canonical intake CTA and conversion validator; anonymous HTTP reachability not independently re-verified |
 | Anonymous HTTP reachability | UNKNOWN | External clients could not complete GitHub Pages DNS/HTTP verification in this execution environment |
 
 ## Evidence model
@@ -143,16 +144,20 @@ Boundary: intake submission is not a contract, not authorization for paid work, 
 
 ### P01-CP-FREELANCE-06 — Conversion Layer
 
-**Status: IMPLEMENTED CANDIDATE / CI GATED**
+**Status: CLOSED / TESTED / DEPLOYED**
 
+- implementation merge `b907577c84eebc80d4c9b648abe9c224eae6fd1c`;
 - one canonical primary CTA: `Start a project`;
 - homepage, services and case studies route to structured intake;
 - trust signals are computed from canonical service/offer/case-study data;
 - three bounded fast-start routes are exposed without ranking claims;
 - no stale commercial `mailto:` CTA remains on primary conversion surfaces;
-- conversion validator added to Portfolio CI.
+- conversion validator included in Portfolio CI;
+- post-merge Portfolio CI `36173060057` = SUCCESS;
+- proof-pack regression `36173060012` = SUCCESS;
+- GitHub Pages deploy `36173059974` = SUCCESS.
 
-Closure is not claimed until PR CI, static export and post-merge GitHub Pages deployment are green.
+Boundary: CP06 does not claim a measured conversion-rate improvement, customer demand or paid-client history. External anonymous HTTP verification remains UNKNOWN in this execution environment.
 
 ## Current source synchronization
 
