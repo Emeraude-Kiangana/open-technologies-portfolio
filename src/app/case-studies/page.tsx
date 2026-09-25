@@ -147,12 +147,20 @@ export default function CaseStudiesPage() {
             Les case studies prouvent une méthode et un scope technique. Une mission client reste
             re-scopée selon son environnement, ses accès, ses coûts externes et son test d&apos;acceptation.
           </p>
-          <a
-            href="/open-technologies-portfolio/services/"
-            className="mt-6 inline-block rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white"
-          >
-            Voir les offres freelance
-          </a>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="/open-technologies-portfolio/services/"
+              className="inline-block rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white"
+            >
+              Voir les offres freelance
+            </a>
+            <a
+              href="/open-technologies-portfolio/intake/"
+              className="inline-block rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900"
+            >
+              Décrire une mission
+            </a>
+          </div>
         </section>
       </div>
     </main>
