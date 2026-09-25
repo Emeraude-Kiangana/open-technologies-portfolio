@@ -15,7 +15,12 @@ for (const slug of expectedSlugs) {
   if (!source.includes(`slug: "${slug}"`)) errors.push(`missing case study: ${slug}`);
 }
 
-const entries = source.split("slug: ").slice(1);
+const entryStarts = [...source.matchAll(/\n    slug: "[^"]+",/g)].map((match) => match.index);
+const entries = entryStarts.map((start, index) => {
+  const end = entryStarts[index + 1] ?? source.indexOf("\n];", start);
+  return source.slice(start, end);
+});
+
 if (entries.length !== expectedSlugs.length) {
   errors.push(`expected ${expectedSlugs.length} case studies, found ${entries.length}`);
 }
