@@ -32,12 +32,12 @@ DELIVERY
 
 | Service | Primary tools | Verification | Public proof state |
 | --- | --- | --- | --- |
-| API Automation | curl · OpenAPI · Node.js fetch | smoke test + error path | PARTIAL |
+| API Automation | curl · OpenAPI · Node.js fetch | local two-service transfer + failure path | PUBLIC |
 | GitHub Setup | git · GitHub · gh CLI | clean install / commands | PUBLIC |
 | GitHub Actions CI | GitHub Actions | green CI run | PUBLIC |
 | FFmpeg Automation | ffmpeg · ffprobe | decode/probe + checksum when useful | PUBLIC |
-| Dockerisation | Docker · Compose | build/start/health | PARTIAL |
-| Backend Prototype | FastAPI/OpenAPI or Node.js | endpoint smoke tests | PARTIAL |
+| Dockerisation | Docker · Compose | build/start/health/smoke/teardown | PUBLIC |
+| Backend Prototype | FastAPI/OpenAPI or Node.js | health/OpenAPI/create/read/error tests | PUBLIC |
 | Technical Audit | git · gh · native linters/tests | reproducible findings | PUBLIC |
 | Technical Documentation | Markdown · Mermaid · GitHub | commands and links checked | PUBLIC |
 
@@ -73,3 +73,18 @@ Every mission should define before implementation:
 P01 is the public presentation and evidence layer. Client-confidential source code, credentials, datasets and private business information must not be copied into P01.
 
 A commercial claim must remain weaker than or equal to the evidence available for that claim.
+
+
+## P01-CP-FREELANCE-02 — Service Proof Packs
+
+Dedicated proof packs live under `proofs/freelance/`.
+
+They close the previous public-evidence gap for:
+
+- API Automation;
+- Dockerisation;
+- Backend Prototype.
+
+The proof state is valid only when the dedicated GitHub Actions workflow is green on the exact commit being merged.
+
+The packs remain bounded demonstrations. They do not claim paid client delivery, production scale, external security certification or compatibility with every third-party service.
