@@ -1,6 +1,6 @@
 # P01-CP-FREELANCE-07 — SEO + Discoverability
 
-Status: **CANDIDATE — CI GATED**
+Status: **CLOSED · TESTED · DEPLOYED**
 
 ## Mission
 
@@ -86,3 +86,43 @@ CP07 closes only if:
 - `npm run validate:seo` passes;
 - lint/tests/secret scan/static export pass;
 - post-merge GitHub Pages deploy passes.
+
+
+## Closure evidence
+
+Implementation merge on `main`:
+
+`ff134606116fba5061ddc23e142735c3dbd35122`
+
+Post-merge verification on that exact commit:
+
+- Portfolio CI `36175726957` — **SUCCESS**;
+- Freelance Service Proof Packs `36175726934` — **SUCCESS**;
+- GitHub Pages deploy `36175726911` — **SUCCESS**.
+
+Portfolio CI verified:
+
+- lint;
+- support tests;
+- freelance service proof tests;
+- offer validation;
+- case-study validation;
+- client-intake validation;
+- conversion-layer validation;
+- SEO/discoverability validation;
+- tracked-file secret scan;
+- static export build.
+
+Implementation note:
+
+The first PR build failed because Next.js static export requires the sitemap metadata route to be explicitly static. The fix added `export const dynamic = "force-static"` to `src/app/sitemap.ts`, after which the PR and post-merge static exports passed.
+
+Closure interpretation:
+
+- canonical metadata is generated for core public pages;
+- intended indexable routes are present in the sitemap;
+- intake/support remain `noindex, follow`;
+- bounded Person + WebSite JSON-LD is present;
+- GitHub Pages project-path limitations are explicitly documented.
+
+This checkpoint does not claim indexing, ranking, traffic, backlinks or Search Console verification.
