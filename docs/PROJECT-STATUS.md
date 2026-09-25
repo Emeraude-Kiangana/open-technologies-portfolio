@@ -1,6 +1,6 @@
 # P01 — Open Technologies Portfolio — Project Status
 
-Status date: **2026-09-20**
+Status date: **2026-09-25**
 
 ## Current phase
 
@@ -26,9 +26,11 @@ The pre-normalization repository name is historical only and is not an active ca
 | Unified Project Evidence Index | IMPLEMENTED | Historical P01-CP-HUB-02 merge `1b7274847d61a097155dc98e2377d58afd5e5c13` |
 | Project/evidence status separation | IMPLEMENTED | `src/data/projects.ts` + public index UI |
 | Source visibility separation | IMPLEMENTED | Explicit `PUBLIC` / `PRIVATE` field on every card |
-| Portfolio CI workflow | TESTED | Normalization run `35468893760` = SUCCESS; current closure-pass validation must remain green |
-| GitHub Pages deploy workflow | TESTED | Normalization deploy `35468893825` = SUCCESS |
-| Pages build/deployment | TESTED | Normalization Pages run `35468916827` = SUCCESS |
+| Portfolio CI workflow | TESTED | CP03 post-merge run `36167308078` = SUCCESS |
+| GitHub Pages deploy workflow | TESTED | CP03 post-merge deploy `36167307873` = SUCCESS |
+| Freelance Tool-First Service Layer | IMPLEMENTED / PUBLIC | 8 canonical services in `src/data/services.ts` |
+| Freelance Service Proof Packs | TESTED / PUBLIC | Dedicated workflow `36167307880` = SUCCESS |
+| Freelance Offer Packaging | TESTED / PUBLIC | 24 bounded packages in `src/data/offers.json`; validator included in Portfolio CI |
 | Anonymous HTTP reachability | UNKNOWN | External clients could not complete GitHub Pages DNS/HTTP verification in this execution environment |
 
 ## Evidence model
@@ -66,6 +68,41 @@ Historical evidence remains valid and must not be rewritten:
 - Pages build/deployment `35330400690`.
 
 The current normalization correction does **not** recreate HUB-02 and does not promote those historical runs as the current final state.
+
+## Freelance checkpoints
+
+### P01-CP-FREELANCE-01 — Tool-First Service Layer
+
+**Status: CLOSED / DEPLOYED**
+
+- merge `120003759f79942538d47bc4ea90f281ed9efdc4`;
+- eight bounded service definitions;
+- Tool-First routes, deliverables, acceptance gates and evidence links;
+- public `/services/` surface.
+
+### P01-CP-FREELANCE-02 — Service Proof Packs
+
+**Status: CLOSED / TESTED / PUBLIC / REPRODUCIBLE**
+
+- merge `ebef5b4b4ca4f868f9753155dcf703853b85c244`;
+- API Automation proof pack;
+- Backend Prototype proof pack;
+- Dockerisation proof pack;
+- dedicated post-merge workflow `36166734206` = SUCCESS.
+
+### P01-CP-FREELANCE-03 — Offer Packaging
+
+**Status: CLOSED / TESTED / PUBLIC / DEPLOYED**
+
+- canonical implementation commit `49a9ede7e679a2f5fa4ded9e4a9d3194e11b02fc`;
+- 8 services × 3 tiers = 24 bounded launch packages;
+- prices, target delivery windows, revisions, scope, deliverables, exclusions and acceptance gates are machine-readable;
+- `npm run validate:offers` is part of Portfolio CI;
+- post-merge Portfolio CI `36167308078` = SUCCESS;
+- proof-pack regression run `36167307880` = SUCCESS;
+- GitHub Pages deploy `36167307873` = SUCCESS.
+
+Commercial boundary: these are launch offers, not market-rate claims, SLA guarantees, production certification or evidence of paid-client history.
 
 ## Current source synchronization
 
