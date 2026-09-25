@@ -25,8 +25,8 @@ export default function ServicesPage() {
             Des micro-services techniques livrés avec code, test, documentation et preuve.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-            Chaque offre commence par l'outil le plus direct déjà disponible. Le code personnalisé
-            n'arrive qu'après validation du besoin. Les preuves publiques sont séparées des
+            Chaque offre commence par l&apos;outil le plus direct déjà disponible. Le code personnalisé
+            n&apos;arrive qu&apos;après validation du besoin. Les preuves publiques sont séparées des
             compétences encore partiellement démontrées.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -147,8 +147,8 @@ export default function ServicesPage() {
         <section className="border-t border-zinc-800 py-12">
           <h2 className="text-3xl font-bold">Règle commerciale</h2>
           <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
-            Une mission n'est acceptée que si son résultat, son périmètre et son test d'acceptation
-            peuvent être écrits avant l'exécution. Les outils payants ou les coûts d'infrastructure
+            Une mission n&apos;est acceptée que si son résultat, son périmètre et son test d&apos;acceptation
+            peuvent être écrits avant l&apos;exécution. Les outils payants ou les coûts d&apos;infrastructure
             ne sont jamais supposés gratuits.
           </p>
         </section>
