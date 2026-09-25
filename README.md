@@ -154,6 +154,29 @@ npm run validate:case-studies
 
 Architecture and claim boundary: `docs/FREELANCE-CASE-STUDIES.md`.
 
+
+## Freelance Client Intake
+
+P01 exposes a structured project-intake route at:
+
+`/intake/`
+
+The canonical collection provider is Tally form `PdK4ex`.
+
+The intake captures only information needed to qualify a bounded mission: contact, service, package, problem, expected result, optional stack/public link/deadline, budget and acceptance of cost/security boundaries.
+
+It explicitly rejects passwords, API keys, private keys, credentials, regulated personal data and confidential source files.
+
+Canonical configuration: `src/data/intake.ts`.
+
+Validation:
+
+```bash
+npm run validate:intake
+```
+
+Architecture and #0$ boundary: `docs/FREELANCE-CLIENT-INTAKE.md`.
+
 ## Ask Open Technologies
 
 P01-CP-SUPPORT-01 adds an evidence-grounded support layer over the portfolio.
