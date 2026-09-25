@@ -27,8 +27,14 @@ export default function Home() {
             aria-label="Navigation principale"
           >
             <a
-              href="#project-index"
+              href="/open-technologies-portfolio/services/"
               className="rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Services freelance
+            </a>
+            <a
+              href="#project-index"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
             >
               Explorer les projets
             </a>
@@ -67,6 +73,34 @@ export default function Home() {
             n’est pas un run CI, un dépôt public n’est pas automatiquement licencié, et une source
             privée n’implique pas qu’un projet soit bloqué.
           </p>
+        </section>
+
+        <section className="border-t border-zinc-800 py-10" aria-labelledby="freelance-title">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
+            Freelance capabilities
+          </p>
+          <h2 id="freelance-title" className="mt-2 text-3xl font-bold">
+            Tool-first. Scope-bounded. Evidence-backed.
+          </h2>
+          <p className="mt-4 max-w-4xl leading-7 text-zinc-300">
+            API automation, GitHub setup, CI/CD, FFmpeg, Docker, backend prototypes,
+            technical audits and documentation. Chaque service expose ses outils primaires,
+            son test d&apos;acceptation et son niveau de preuve publique.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="/open-technologies-portfolio/services/"
+              className="rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Voir les 8 services
+            </a>
+            <a
+              href="mailto:Emeraude-Kiangana@proton.me?subject=Mission%20freelance%20Open%20Technologies"
+              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
+            >
+              Proposer une mission
+            </a>
+          </div>
         </section>
 
         <section
