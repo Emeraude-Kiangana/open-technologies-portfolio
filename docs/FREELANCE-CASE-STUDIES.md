@@ -1,6 +1,6 @@
 # P01-CP-FREELANCE-04 — Case Studies
 
-Status: **CANDIDATE — CI GATED**
+Status: **CLOSED · TESTED · PUBLIC · DEPLOYED**
 
 ## Mission
 
@@ -59,3 +59,36 @@ The validator requires the four canonical cases, allowed reference types, core n
 `/case-studies/`
 
 The page links evidence directly and maps each case to relevant freelance services.
+
+
+## Closure evidence
+
+Implementation merge on `main`:
+
+`8c75583cbd8f9ba8bc0df998356d0180a88ffba6`
+
+Post-merge evidence on that exact commit:
+
+- Portfolio CI `36169741154` — **SUCCESS**;
+- Freelance Service Proof Packs `36169741119` — **SUCCESS**;
+- GitHub Pages deploy `36169741088` — **SUCCESS**.
+
+Portfolio CI verified:
+
+- lint;
+- support tests;
+- freelance service proof tests;
+- offer validation;
+- case-study validation;
+- tracked-file secret scan;
+- static export build.
+
+Closure interpretation:
+
+- 4 canonical evidence-backed case studies;
+- every case labelled `INTERNAL PROJECT` or `TECHNICAL PROOF`;
+- every case exposes problem, constraints, approach, tools, results, related services, evidence and limitations;
+- public `/case-studies/` surface is included in the static export;
+- homepage and service catalog link to the reference layer.
+
+This checkpoint does not claim paid-client history, testimonials, commercial adoption, production scale, SLA guarantees or certification.
