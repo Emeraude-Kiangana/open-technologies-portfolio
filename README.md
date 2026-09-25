@@ -122,7 +122,11 @@ Canonical service data: `src/data/services.ts`.
 
 Commercial architecture and evidence boundary: `docs/FREELANCE-TOOL-FIRST.md`.
 
-P01 does not convert a partial proof into a global capability claim. Services with incomplete public evidence remain explicitly marked `PARTIAL PROOF`.
+Offer packaging and pricing doctrine: `docs/FREELANCE-OFFERS.md`.
+
+Canonical package data: `src/data/offers.json`.
+
+All eight services now have bounded public technical proof. This does not imply paid-client experience, production scale, SLA guarantees or certification.
 
 ## Ask Open Technologies
 
