@@ -74,6 +74,40 @@ export default function ServicesPage() {
           </div>
         </section>
 
+        <section className="border-t border-zinc-800 py-10" aria-labelledby="offer-index-title">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
+            Quick offer index
+          </p>
+          <h2 id="offer-index-title" className="mt-2 text-3xl font-bold">
+            Choisir par résultat et budget
+          </h2>
+          <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
+            Les montants ci-dessous sont des prix de lancement pour des missions strictement bornées.
+            Le scope écrit et le test d&apos;acceptation restent prioritaires sur le nom du package.
+          </p>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {offersData.services.map((entry) => {
+              const service = freelanceServices.find((item) => item.slug === entry.slug);
+              const starter = entry.packages[0];
+              const standard = entry.packages[1];
+
+              return (
+                <a
+                  key={entry.slug}
+                  href={`#${entry.slug}`}
+                  className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5 hover:border-zinc-600 hover:bg-zinc-900/70"
+                >
+                  <p className="text-sm font-semibold">{service?.title ?? entry.slug}</p>
+                  <p className="mt-3 text-2xl font-bold">À partir de ${starter.priceUsd}</p>
+                  <p className="mt-1 text-xs text-zinc-500">
+                    Standard ${standard.priceUsd} · {starter.deliveryTarget}
+                  </p>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="border-t border-zinc-800 py-12">
           <div className="mb-8">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
