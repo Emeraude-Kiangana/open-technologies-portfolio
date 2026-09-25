@@ -141,6 +141,19 @@ Boundary: all four are internal projects or technical proofs. No paying customer
 
 Boundary: intake submission is not a contract, not authorization for paid work, and does not relax the external-cost or secret-handling rules.
 
+### P01-CP-FREELANCE-06 — Conversion Layer
+
+**Status: IMPLEMENTED CANDIDATE / CI GATED**
+
+- one canonical primary CTA: `Start a project`;
+- homepage, services and case studies route to structured intake;
+- trust signals are computed from canonical service/offer/case-study data;
+- three bounded fast-start routes are exposed without ranking claims;
+- no stale commercial `mailto:` CTA remains on primary conversion surfaces;
+- conversion validator added to Portfolio CI.
+
+Closure is not claimed until PR CI, static export and post-merge GitHub Pages deployment are green.
+
 ## Current source synchronization
 
 | Project | Canonical source state | Current interpretation |
