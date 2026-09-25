@@ -1,4 +1,17 @@
+import offersData from "@/data/offers.json";
 import { freelanceServices } from "@/data/services";
+
+const offersByService = new Map(
+  offersData.services.map((entry) => [entry.slug, entry.packages]),
+);
+
+function quoteHref(service: string, tier: string, packageName: string) {
+  const subject = encodeURIComponent(`Freelance quote — ${service} — ${tier}`);
+  const body = encodeURIComponent(
+    `Hello Emeraude,\n\nI am interested in: ${service} / ${tier} — ${packageName}.\n\nMy project:\nExpected result:\nDeadline:\nRelevant links:\n\nPlease confirm scope, external costs and acceptance criteria before starting.`,
+  );
+  return `mailto:Emeraude-Kiangana@proton.me?subject=${subject}&body=${body}`;
+}
 
 function proofClasses(state: string) {
   if (state === "PUBLIC PROOF") return "border-emerald-800/60 bg-emerald-950/30 text-emerald-200";
@@ -26,8 +39,11 @@ export default function ServicesPage() {
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
             Chaque offre commence par l&apos;outil le plus direct déjà disponible. Le code personnalisé
-            n&apos;arrive qu&apos;après validation du besoin. Les preuves publiques sont séparées des
-            compétences encore partiellement démontrées.
+            n&apos;arrive qu&apos;après validation du besoin. Les huit compétences disposent maintenant
+            de preuves publiques bornées et de packages avec scope, prix et critères d&apos;acceptation.
+          </p>
+          <p className="mt-4 max-w-3xl text-sm leading-6 text-zinc-400">
+            {offersData.pricingNote}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -116,7 +132,77 @@ export default function ServicesPage() {
                   {service.acceptance.map((item) => <li key={item}>• {item}</li>)}
                 </ul>
 
-                <h4 className="mt-7 font-semibold">Preuves publiques</h4>
+                <h4 className="mt-8 font-semibold">Packages de lancement</h4>
+                <div className="mt-4 grid gap-4">
+                  {(offersByService.get(service.slug) ?? []).map((offer) => (
+                    <div
+                      key={offer.tier}
+                      className="rounded-xl border border-zinc-800 bg-zinc-950/70 p-5"
+                    >
+                      <div className="flex flex-wrap items-start justify-between gap-3">
+                        <div>
+                          <p className="font-mono text-xs font-semibold tracking-[0.14em] text-zinc-400">
+                            {offer.tier}
+                          </p>
+                          <h5 className="mt-1 text-lg font-bold">{offer.name}</h5>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-2xl font-bold">${offer.priceUsd}</p>
+                          <p className="text-xs text-zinc-500">{offer.deliveryTarget}</p>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                            Scope
+                          </p>
+                          <ul className="mt-2 space-y-1 text-sm leading-6 text-zinc-300">
+                            {offer.scope.map((item) => <li key={item}>• {item}</li>)}
+                          </ul>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                            Livrables
+                          </p>
+                          <ul className="mt-2 space-y-1 text-sm leading-6 text-zinc-300">
+                            {offer.deliverables.map((item) => <li key={item}>• {item}</li>)}
+                          </ul>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                            Exclusions
+                          </p>
+                          <ul className="mt-2 space-y-1 text-sm leading-6 text-zinc-400">
+                            {offer.exclusions.map((item) => <li key={item}>• {item}</li>)}
+                          </ul>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                            Acceptance
+                          </p>
+                          <ul className="mt-2 space-y-1 text-sm leading-6 text-zinc-300">
+                            {offer.acceptance.map((item) => <li key={item}>• {item}</li>)}
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-zinc-800 pt-4">
+                        <p className="text-xs text-zinc-500">
+                          {offer.revisions} revision{offer.revisions === 1 ? "" : "s"} incluse{offer.revisions === 1 ? "" : "s"}
+                        </p>
+                        <a
+                          href={quoteHref(service.title, offer.tier, offer.name)}
+                          className="rounded-lg bg-zinc-100 px-3 py-2 text-sm font-semibold text-zinc-950 hover:bg-white"
+                        >
+                          Demander ce package
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <h4 className="mt-8 font-semibold">Preuves publiques</h4>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {service.proofs.map((proof) => (
                     <a
@@ -148,8 +234,8 @@ export default function ServicesPage() {
           <h2 className="text-3xl font-bold">Règle commerciale</h2>
           <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
             Une mission n&apos;est acceptée que si son résultat, son périmètre et son test d&apos;acceptation
-            peuvent être écrits avant l&apos;exécution. Les outils payants ou les coûts d&apos;infrastructure
-            ne sont jamais supposés gratuits.
+            peuvent être écrits avant l&apos;exécution. Un besoin hors package déclenche un nouveau devis.
+            Les outils payants ou les coûts d&apos;infrastructure ne sont jamais supposés gratuits.
           </p>
         </section>
       </div>
