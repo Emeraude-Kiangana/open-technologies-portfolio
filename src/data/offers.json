@@ -1,0 +1,718 @@
+{
+  "version": "0.1.0",
+  "currency": "USD",
+  "pricingNote": "Launch pricing for bounded freelance missions. Any paid third-party service, cloud bill, API credit, domain, license or client-specific infrastructure is excluded unless explicitly quoted before work starts.",
+  "services": [
+    {
+      "slug": "api-automation",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "API Quick Connect",
+          "priceUsd": 25,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "1 source API → 1 destination API",
+            "up to 1 main data transformation",
+            "API key/bearer/basic auth only"
+          ],
+          "deliverables": [
+            "working script",
+            ".env.example",
+            "README",
+            "smoke test"
+          ],
+          "exclusions": [
+            "OAuth application setup",
+            "pagination over large datasets",
+            "paid API usage",
+            "production hosting"
+          ],
+          "acceptance": [
+            "test request succeeds with client-provided sandbox/test credentials",
+            "documented input is transformed and delivered as specified"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "API Workflow",
+          "priceUsd": 55,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "up to 2 API endpoints or 1 webhook flow",
+            "field mapping and validation",
+            "basic timeout/error handling"
+          ],
+          "deliverables": [
+            "integration script",
+            "configuration example",
+            "tests/smoke checks",
+            "setup documentation",
+            "delivery evidence"
+          ],
+          "exclusions": [
+            "complex OAuth consent flows",
+            "high-volume ETL",
+            "managed cloud infrastructure",
+            "24/7 operations"
+          ],
+          "acceptance": [
+            "nominal flow passes",
+            "one documented error path is handled",
+            "no secret is committed"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "API Automation Pack",
+          "priceUsd": 95,
+          "deliveryTarget": "3 business days",
+          "revisions": 2,
+          "scope": [
+            "up to 3 endpoints in one bounded workflow",
+            "pagination or simple scheduling when required",
+            "basic retry/backoff policy",
+            "structured logs"
+          ],
+          "deliverables": [
+            "automation source",
+            "tests",
+            "runbook",
+            "configuration template",
+            "proof of execution"
+          ],
+          "exclusions": [
+            "enterprise IAM",
+            "large-scale data engineering",
+            "SLA/monitoring service",
+            "unbounded third-party troubleshooting"
+          ],
+          "acceptance": [
+            "documented end-to-end scenario passes",
+            "configured failure behavior is demonstrated",
+            "setup is reproducible from README"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "github-setup",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "Repo Cleanup",
+          "priceUsd": 18,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "1 repository",
+            "README cleanup",
+            ".gitignore",
+            "basic folder normalization"
+          ],
+          "deliverables": [
+            "normalized repository structure",
+            "README",
+            ".gitignore",
+            "change summary"
+          ],
+          "exclusions": [
+            "application refactor",
+            "CI/CD implementation",
+            "dependency upgrades with breaking changes"
+          ],
+          "acceptance": [
+            "repository structure matches agreed layout",
+            "README contains install/run instructions where applicable"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "Repo Professional",
+          "priceUsd": 35,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "1 repository",
+            "README + setup documentation",
+            "scripts normalization",
+            "issue/PR templates when useful"
+          ],
+          "deliverables": [
+            "professional README",
+            "setup guide",
+            "normalized scripts",
+            "repository hygiene improvements"
+          ],
+          "exclusions": [
+            "major code rewrite",
+            "CI pipeline beyond a simple existing-script hook",
+            "organization administration"
+          ],
+          "acceptance": [
+            "documented commands are internally consistent",
+            "repository entrypoint is clear to a new contributor"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "Repo Evidence Ready",
+          "priceUsd": 60,
+          "deliveryTarget": "3 business days",
+          "revisions": 2,
+          "scope": [
+            "1 repository",
+            "documentation normalization",
+            "verification commands",
+            "evidence links/status section",
+            "release-readiness checklist"
+          ],
+          "deliverables": [
+            "normalized repo",
+            "README + status docs",
+            "verification checklist",
+            "evidence map"
+          ],
+          "exclusions": [
+            "external certification",
+            "full CI architecture",
+            "legal licensing advice"
+          ],
+          "acceptance": [
+            "key claims resolve to identifiable files/runs/commits",
+            "verification path is documented"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "github-actions-ci",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "CI Starter",
+          "priceUsd": 25,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "1 GitHub Actions workflow",
+            "up to 2 existing commands such as test/build"
+          ],
+          "deliverables": [
+            "workflow YAML",
+            "green run",
+            "README note"
+          ],
+          "exclusions": [
+            "deployment",
+            "cloud credentials",
+            "matrix builds",
+            "self-hosted runners"
+          ],
+          "acceptance": [
+            "workflow runs on agreed trigger",
+            "configured commands pass on target branch"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "CI Quality Gate",
+          "priceUsd": 50,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "lint + test + build pipeline",
+            "dependency cache when appropriate",
+            "branch/PR trigger"
+          ],
+          "deliverables": [
+            "CI workflow",
+            "quality gates",
+            "green proof run",
+            "maintenance notes"
+          ],
+          "exclusions": [
+            "production deployment",
+            "complex monorepo matrices",
+            "paid runner setup"
+          ],
+          "acceptance": [
+            "all configured gates pass",
+            "a failing command causes CI failure"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "CI Multi-Job",
+          "priceUsd": 85,
+          "deliveryTarget": "3 business days",
+          "revisions": 2,
+          "scope": [
+            "up to 3 CI jobs",
+            "artifacts or reports when useful",
+            "basic matrix or environment separation"
+          ],
+          "deliverables": [
+            "multi-job workflows",
+            "artifact/report configuration",
+            "documentation",
+            "proof runs"
+          ],
+          "exclusions": [
+            "enterprise release engineering",
+            "Kubernetes deployment",
+            "24/7 pipeline support"
+          ],
+          "acceptance": [
+            "jobs execute with documented dependencies",
+            "failure propagation is correct",
+            "proof run is public or shared privately"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ffmpeg-automation",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "Media Command",
+          "priceUsd": 25,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "1 repeatable media transformation",
+            "1 input profile",
+            "1 output profile"
+          ],
+          "deliverables": [
+            "FFmpeg command/script",
+            "sample invocation",
+            "ffprobe verification"
+          ],
+          "exclusions": [
+            "AI generation",
+            "GPU provisioning",
+            "large batch orchestration",
+            "copyrighted source acquisition"
+          ],
+          "acceptance": [
+            "output decodes",
+            "agreed codec/container/resolution constraints are met"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "Media Batch Workflow",
+          "priceUsd": 50,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "batch conversion/compression/concat/subtitle workflow",
+            "basic input validation",
+            "multiple files in one local job"
+          ],
+          "deliverables": [
+            "automation script",
+            "README",
+            "sample output",
+            "verification commands"
+          ],
+          "exclusions": [
+            "cloud render farm",
+            "AI video generation",
+            "complex motion graphics"
+          ],
+          "acceptance": [
+            "sample batch completes",
+            "outputs pass ffprobe checks"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "Media Pipeline Pack",
+          "priceUsd": 90,
+          "deliveryTarget": "3 business days",
+          "revisions": 2,
+          "scope": [
+            "multi-step FFmpeg pipeline",
+            "structured configuration",
+            "checksums or provenance when useful",
+            "error reporting"
+          ],
+          "deliverables": [
+            "pipeline scripts",
+            "configuration",
+            "tests/smoke checks",
+            "runbook",
+            "evidence"
+          ],
+          "exclusions": [
+            "distributed GPU pipeline",
+            "managed storage/CDN",
+            "real-time streaming platform"
+          ],
+          "acceptance": [
+            "documented multi-step scenario completes",
+            "output validation and error behavior are demonstrated"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dockerisation",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "Dockerize One App",
+          "priceUsd": 35,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "1 application process",
+            "1 Dockerfile",
+            "basic environment configuration"
+          ],
+          "deliverables": [
+            "Dockerfile",
+            ".dockerignore",
+            "run instructions"
+          ],
+          "exclusions": [
+            "database migration",
+            "multi-service stack",
+            "cloud deployment",
+            "Kubernetes"
+          ],
+          "acceptance": [
+            "image builds",
+            "container starts",
+            "documented port/command works"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "Compose Ready",
+          "priceUsd": 65,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "application + up to 1 supporting service",
+            "Docker Compose",
+            "health check where feasible"
+          ],
+          "deliverables": [
+            "Dockerfile",
+            "compose.yaml",
+            ".env.example",
+            "health/smoke check",
+            "README"
+          ],
+          "exclusions": [
+            "production secrets management",
+            "Kubernetes",
+            "managed cloud services"
+          ],
+          "acceptance": [
+            "compose stack starts",
+            "health/smoke test passes",
+            "stack stops cleanly"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "Reproducible Container Pack",
+          "priceUsd": 110,
+          "deliveryTarget": "3 business days",
+          "revisions": 2,
+          "scope": [
+            "up to 3 bounded services",
+            "non-root runtime where practical",
+            "health checks",
+            "CI image build verification"
+          ],
+          "deliverables": [
+            "container files",
+            "Compose stack",
+            "CI verification",
+            "runbook",
+            "evidence"
+          ],
+          "exclusions": [
+            "production cluster operations",
+            "registry billing",
+            "security certification",
+            "multi-region deployment"
+          ],
+          "acceptance": [
+            "clean build succeeds",
+            "services become healthy",
+            "CI reproduces the container build"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "backend-prototype",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "API Skeleton",
+          "priceUsd": 45,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "up to 3 simple endpoints",
+            "JSON requests/responses",
+            "basic validation"
+          ],
+          "deliverables": [
+            "backend source",
+            "health endpoint",
+            "README",
+            "smoke tests"
+          ],
+          "exclusions": [
+            "database",
+            "authentication",
+            "production hosting",
+            "payments"
+          ],
+          "acceptance": [
+            "documented endpoints respond as specified",
+            "invalid input returns controlled errors"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "API Prototype",
+          "priceUsd": 90,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "up to 6 endpoints",
+            "OpenAPI or equivalent contract",
+            "simple in-memory or file-backed persistence when appropriate"
+          ],
+          "deliverables": [
+            "API source",
+            "contract/docs",
+            "tests",
+            "configuration template",
+            "setup guide"
+          ],
+          "exclusions": [
+            "enterprise auth",
+            "complex relational model",
+            "managed production database"
+          ],
+          "acceptance": [
+            "core create/read/update flow passes when included",
+            "contract and tests match implementation"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "Backend Demo Pack",
+          "priceUsd": 150,
+          "deliveryTarget": "4 business days",
+          "revisions": 2,
+          "scope": [
+            "up to 8 bounded endpoints",
+            "structured validation/error handling",
+            "Docker packaging",
+            "CI tests"
+          ],
+          "deliverables": [
+            "backend prototype",
+            "API docs",
+            "tests",
+            "Docker files",
+            "CI proof",
+            "runbook"
+          ],
+          "exclusions": [
+            "production SLA",
+            "large-scale architecture",
+            "regulated payment/custody systems",
+            "penetration testing"
+          ],
+          "acceptance": [
+            "documented demo scenario passes end to end",
+            "CI is green",
+            "containerized run is reproducible"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "technical-audit",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "Repo Health Check",
+          "priceUsd": 25,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "1 small repository",
+            "installation/build/test/documentation inspection",
+            "up to 10 prioritized findings"
+          ],
+          "deliverables": [
+            "audit report",
+            "reproduction commands",
+            "priority list"
+          ],
+          "exclusions": [
+            "penetration testing",
+            "legal/security certification",
+            "full remediation"
+          ],
+          "acceptance": [
+            "each reported finding references observable evidence",
+            "severity rationale is documented"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "Technical Audit + Fixes",
+          "priceUsd": 55,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "1 repository",
+            "audit plus up to 3 bounded corrective patches",
+            "CI/documentation review"
+          ],
+          "deliverables": [
+            "audit report",
+            "patches",
+            "before/after verification",
+            "next-step list"
+          ],
+          "exclusions": [
+            "major architecture rewrite",
+            "security pentest",
+            "dependency migration across major versions"
+          ],
+          "acceptance": [
+            "selected fixes reproduce",
+            "verification commands pass or remaining failures are documented"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "Evidence Audit Pack",
+          "priceUsd": 95,
+          "deliveryTarget": "3 business days",
+          "revisions": 2,
+          "scope": [
+            "code/repo/CI/docs consistency audit",
+            "claim-to-evidence mapping",
+            "up to 5 bounded fixes"
+          ],
+          "deliverables": [
+            "structured audit",
+            "evidence map",
+            "patches",
+            "verification log",
+            "risk/next-actions register"
+          ],
+          "exclusions": [
+            "formal compliance audit",
+            "penetration test",
+            "production incident response"
+          ],
+          "acceptance": [
+            "claims and evidence are explicitly separated",
+            "applied fixes have reproducible verification"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "technical-documentation",
+      "packages": [
+        {
+          "tier": "STARTER",
+          "name": "README Upgrade",
+          "priceUsd": 20,
+          "deliveryTarget": "1 business day",
+          "revisions": 1,
+          "scope": [
+            "1 README",
+            "project summary",
+            "install/run/use sections"
+          ],
+          "deliverables": [
+            "rewritten README",
+            "verified command formatting"
+          ],
+          "exclusions": [
+            "full architecture discovery",
+            "API reference generation",
+            "translation set"
+          ],
+          "acceptance": [
+            "README reflects supplied/project-observed behavior",
+            "commands are internally consistent"
+          ]
+        },
+        {
+          "tier": "STANDARD",
+          "name": "Developer Docs",
+          "priceUsd": 45,
+          "deliveryTarget": "2 business days",
+          "revisions": 1,
+          "scope": [
+            "README + SETUP + architecture overview",
+            "one Mermaid diagram when useful"
+          ],
+          "deliverables": [
+            "documentation set",
+            "architecture diagram",
+            "verification checklist"
+          ],
+          "exclusions": [
+            "large product manual",
+            "legal/compliance documentation",
+            "continuous maintenance"
+          ],
+          "acceptance": [
+            "new contributor path is documented",
+            "architecture statements map to repository evidence"
+          ]
+        },
+        {
+          "tier": "ADVANCED",
+          "name": "Reproducibility Docs Pack",
+          "priceUsd": 80,
+          "deliveryTarget": "3 business days",
+          "revisions": 2,
+          "scope": [
+            "README + setup + runbook + architecture + limitations/evidence sections"
+          ],
+          "deliverables": [
+            "complete documentation pack",
+            "diagram(s)",
+            "runbook",
+            "evidence links",
+            "known limitations"
+          ],
+          "exclusions": [
+            "formal standards certification",
+            "user research",
+            "ongoing documentation retainer"
+          ],
+          "acceptance": [
+            "documented verification path is executable",
+            "limitations and assumptions are explicit"
+          ]
+        }
+      ]
+    }
+  ]
+}
