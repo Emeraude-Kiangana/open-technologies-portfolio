@@ -98,8 +98,8 @@ export const projects: ProjectEvidence[] = [
     sourceHref: "https://github.com/Emeraude-Kiangana/ecdf",
     verifiedScope: [
       "Local transfer-domain model with explicit states, role rules, invariants, bigint amounts and duplicate-event rejection.",
-      "Current main 8ef8002ac538caae69e5e9aa6f093bc826af3f87 includes the bounded LOCAL_DOMAIN_ONLY lifecycle demo.",
-      "Post-merge CI run 35508188094 completed successfully: 29 / 29 tests passed and the deterministic demo step succeeded.",
+      "Current main 6ba26e8dd0f6d5648f2b49a71c8611396bd4f8be preserves the bounded LOCAL_DOMAIN_ONLY lifecycle demo and adds documentation-only Stellar feasibility checkpoints CP03-C / CP03-D.",
+      "Current-main CI run 36019846765 completed successfully: 29 / 29 tests passed and the deterministic demo step succeeded.",
       "The demo executes DRAFT → AUTHORIZED → SUBMITTED → SETTLED locally and explicitly records networkSettlement=false.",
       "Foundation evidence remains anchored at commit 34814b06ae28fe5e3a62b9866cb9781332312b7b.",
     ],
@@ -114,11 +114,11 @@ export const projects: ProjectEvidence[] = [
       },
       {
         label: "Current main",
-        href: "https://github.com/Emeraude-Kiangana/ecdf/commit/8ef8002ac538caae69e5e9aa6f093bc826af3f87",
+        href: "https://github.com/Emeraude-Kiangana/ecdf/commit/6ba26e8dd0f6d5648f2b49a71c8611396bd4f8be",
       },
       {
-        label: "CI + demo run 35508188094",
-        href: "https://github.com/Emeraude-Kiangana/ecdf/actions/runs/35508188094",
+        label: "CI + demo run 36019846765",
+        href: "https://github.com/Emeraude-Kiangana/ecdf/actions/runs/36019846765",
       },
       {
         label: "Demo source",
@@ -135,11 +135,12 @@ export const projects: ProjectEvidence[] = [
     ],
     limitations: [
       "The current demo is a local CLI scenario, not a browser-hosted public application.",
-      "No live Stellar settlement adapter, RPC/Testnet transaction flow or Mainnet.",
+      "CP03-C / CP03-D are documentation and feasibility evidence only; no Stellar settlement adapter is implemented.",
+      "No live Stellar settlement adapter, RPC/Testnet application flow or Mainnet.",
       "No custody, official CDF backing, CBDC/bank claim, production KYC or regulatory approval.",
       "No independent clean reproduction or external validation is recorded.",
     ],
-    lastVerified: "2026-09-20",
+    lastVerified: "2026-09-24",
   },
   {
     name: "KIANGANA 2.0 / KIF",
