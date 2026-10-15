@@ -1,6 +1,6 @@
 # P01 — Open Technologies Portfolio — Project Status
 
-Status date: **2026-09-25**
+Status date: **2026-10-15**
 
 ## Current phase
 
@@ -182,14 +182,16 @@ Boundary: CP07 does not claim search-engine indexing, ranking, organic traffic, 
 | Project | Canonical source state | Current interpretation |
 |---|---|---|
 | CPCN | private `main@f98056fd5db26377545e0dc6549bfe47fd9d91af` | Global `DOCUMENTED`; G0-01 frozen field collection; G0-02 `DOCUMENTED / IMPLEMENTED / TESTED`; partial public evidence; external validation not claimed |
-| eCDF | public `main@c3a82329bdcd339a99595b64ea3a3dd4ee3adefa`; CI `35463718531` SUCCESS | `TESTED · PUBLIC`; 27/27 tests; Apache-2.0; no public demo; no live Stellar settlement |
+| eCDF | public `main@6ba26e8dd0f6d5648f2b49a71c8611396bd4f8be`; current-main CI `36019846765` SUCCESS | `TESTED · PUBLIC`; 29/29 tests + deterministic local demo; CP03-C / CP03-D are documentation-only Stellar feasibility/boundary checkpoints; no live Stellar settlement adapter |
 | KIANGANA 2.0 | public `main@0f9829e54436ae860977c3d2b3349d74482258da`; normalization PR #8 CI `35465436732` SUCCESS | `DOCUMENTED / IMPLEMENTED / TESTED / PUBLIC`; product-normalization documentation is now canonical main |
 | KIF V0.2 CP-01 | proof `69d3c9a1fdfc9616700572011a466b549be0c867`; freeze `57c4bfc2664398383a784128a9fa03dc3e41c0e4`; live run `35286354669`; freeze run `35287044624` | Historical `REPRODUCIBLE`, CLOSED / FROZEN checkpoint; `kif/` is not present on current main |
 | NovaForge | private `main@74aa0bbbd7a9b4dceb0b987b27d2c670cac40903`; main CI `35464627769` SUCCESS | `REPRODUCIBLE`; v0.1.0-alpha; 100/100 regression + 1/1 E2E on reference release CI; public P01 proof assets exist; anonymous HTTP status UNKNOWN |
 | RegenTwin | public `main@fadf386ed5c62dcd45a66008e8b2989b6402b63f`; CI `35324672286` SUCCESS | `TESTED` Gate 0; 4 tests; no release version claimed; no license file detected |
 | RWA Red-Team Lab | public `main@922291ca7076ed871f70d6c70623c7b61541297e`; CI `35327731335` SUCCESS | `TESTED` deterministic Gate 0 verifier; 4 tests; no release version claimed; no license file detected |
-| C.A.O — Chief Agent Officer | private `main@991a5b7c93e17c6e2769732b59a81e9765aff61f`; CP-07 proof run `35479200779` SUCCESS | CP-01 → CP-07 CLOSED / TESTED — CI-BACKED; 95/95 full suite; deterministic mission-execution sandbox; reproducibility/public source not claimed |
-| P01 | public `main@bd5659b373b15699ae444217f9abdf97d85a5b74`; CI `35468893760`, deploy `35468893825`, Pages `35468916827` SUCCESS | Public evidence hub synchronized before the C.A.O closure pass |
+| C.A.O — Chief Agent Officer | private `main@839b0ea0f4d79e5abbb52d1d440732fda20135ea`; CP-08 proof run `35480285634` SUCCESS; main CP-08 workflow `35480372127` SUCCESS | CP-01 → CP-08 CLOSED / TESTED — CI-BACKED; 113/113 full suite; verified Marketplace engagement → CP-07 execution handoff; payment/settlement not implemented; reproducibility/public source not claimed |
+| P01 | public `main@8f0d3e986311f56a62ef27799a0abe67c8e52d75`; Portfolio CI `36175997148`, deploy `36175996914`, Pages `36176051392` SUCCESS | Public evidence hub with Freelance CP01→CP07 closed; Normalization Delta Pass v2 is resynchronizing eCDF/C.A.O evidence without changing project maturity claims |
+
+Normalization note: eCDF current GitHub `main@6ba26e8…` and workflow `36019846765` are newer than the verified-main anchors still written inside eCDF's own `docs/PROJECT-STATUS.md`. P01 therefore cites the current GitHub commit/workflow while preserving the boundary that CP03-C / CP03-D are documentation/feasibility evidence only and do not implement a Stellar adapter.
 
 ## CPCN boundary
 
@@ -232,18 +234,22 @@ This proves the public **source package is present in P01**. It does not establi
 
 ## C.A.O boundary
 
-C.A.O is a real tested private-source project and is now part of the canonical P01 index.
+C.A.O is a real tested private-source project and is part of the canonical P01 index.
 
-- current main: `991a5b7c93e17c6e2769732b59a81e9765aff61f`;
+- current main: `839b0ea0f4d79e5abbb52d1d440732fda20135ea`;
 - kernel: v0.1;
-- current closed checkpoint: CP-07 Mission Execution;
-- proof run `35479200779`: SUCCESS;
-- full suite: 95/95 PASS;
+- current closed checkpoint: CP-08 Marketplace;
+- CP-08 proof run `35480285634`: SUCCESS;
+- current-main CP-08 workflow `35480372127`: SUCCESS;
+- full suite: 113/113 PASS;
+- active verified listings: 4;
+- canonical bounded quote: 0.21 USD / mission;
+- payment state: **NOT_IMPLEMENTED**;
 - public source: **NO**;
 - reproducible status: **NOT CLAIMED**;
-- production execution / live inter-agent messaging / arbitrary tools / marketplace: **NOT IMPLEMENTED**.
+- public production marketplace / payment processing / escrow / settlement / live inter-agent messaging: **NOT IMPLEMENTED**.
 
-P01 exposes only bounded status and evidence metadata; it does not publish C.A.O private source.
+P01 exposes bounded status and evidence metadata only; it does not publish C.A.O private source or promote marketplace engagement into financial settlement.
 
 ## P01 pre-resync baseline
 

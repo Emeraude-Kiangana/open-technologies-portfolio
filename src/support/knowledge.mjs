@@ -97,12 +97,13 @@ export const supportKnowledge = [
     implemented_features: [
       "Deterministic transfer lifecycle with explicit states, roles, invariants, and duplicate-event rejection.",
       "Local CLI demo executes DRAFT → AUTHORIZED → SUBMITTED → SETTLED with networkSettlement=false.",
+      "CP03-C / CP03-D document the future Stellar adapter boundary and feasibility path; they do not implement a live adapter.",
     ],
     tests: [
       {
         label: "Current main CI and demo",
         result: "29 / 29 PASS",
-        evidence_id: "ecdf-ci-35508188094",
+        evidence_id: "ecdf-ci-36019846765",
       },
     ],
     evidence: [
@@ -115,17 +116,17 @@ export const supportKnowledge = [
       },
       {
         id: "ecdf-main",
-        label: "Current main 8ef8002a…",
+        label: "Current main 6ba26e8d…",
         kind: "commit",
         access: "PUBLIC",
-        href: "https://github.com/Emeraude-Kiangana/ecdf/commit/8ef8002ac538caae69e5e9aa6f093bc826af3f87",
+        href: "https://github.com/Emeraude-Kiangana/ecdf/commit/6ba26e8dd0f6d5648f2b49a71c8611396bd4f8be",
       },
       {
-        id: "ecdf-ci-35508188094",
-        label: "CI + demo run 35508188094",
+        id: "ecdf-ci-36019846765",
+        label: "CI + demo run 36019846765",
         kind: "ci-run",
         access: "PUBLIC",
-        href: "https://github.com/Emeraude-Kiangana/ecdf/actions/runs/35508188094",
+        href: "https://github.com/Emeraude-Kiangana/ecdf/actions/runs/36019846765",
       },
       {
         id: "ecdf-foundation",
@@ -147,15 +148,22 @@ export const supportKnowledge = [
         id: "tested-foundation",
         status: "TESTED",
         maturity: ["DOCUMENTED", "IMPLEMENTED", "TESTED"],
-        evidence_ids: ["ecdf-foundation", "ecdf-ci-35508188094"],
+        evidence_ids: ["ecdf-foundation", "ecdf-ci-36019846765"],
+      },
+      {
+        id: "CP03-C/CP03-D",
+        status: "DOCUMENTED — adapter boundary / feasibility only",
+        maturity: ["DOCUMENTED"],
+        evidence_ids: ["ecdf-main"],
       },
     ],
     known_limitations: [
       "The demo is local and deterministic, not a browser-hosted financial application.",
+      "The source repository's PROJECT-STATUS document still cites the earlier verified-main anchor 8ef8002… / run 35508188094.",
       "No independent clean reproduction or external validation is recorded.",
     ],
     explicit_non_claims: [
-      "No live Stellar settlement adapter, Testnet transaction flow, or Mainnet.",
+      "No live Stellar settlement adapter, Testnet application transaction flow, or Mainnet.",
       "No custody, CBDC claim, bank claim, regulatory approval, or market validation.",
       "A local SETTLED state is not network settlement.",
     ],
@@ -167,6 +175,8 @@ export const supportKnowledge = [
       "transfer",
       "typescript",
       "automated tests",
+      "stellar",
+      "adapter boundary",
     ],
   },
   {
@@ -502,7 +512,7 @@ export const supportKnowledge = [
       {
         label: "CP-08 full suite",
         result: "113 / 113 PASS",
-        evidence_id: "cao-public-proof",
+        evidence_id: "cao-cp08-proof",
       },
     ],
     evidence: [
@@ -512,6 +522,18 @@ export const supportKnowledge = [
         kind: "public-proof",
         access: "PUBLIC",
         href: "/open-technologies-portfolio/projects/cao/",
+      },
+      {
+        id: "cao-main-private",
+        label: "Private main 839b0ea0…",
+        kind: "commit",
+        access: "PRIVATE",
+      },
+      {
+        id: "cao-cp08-proof",
+        label: "CP-08 proof run 35480285634",
+        kind: "ci-run",
+        access: "PRIVATE",
       },
     ],
     repositories: [
@@ -525,7 +547,7 @@ export const supportKnowledge = [
         id: "CP-08",
         status: "CLOSED / TESTED — CI-BACKED",
         maturity: ["DOCUMENTED", "IMPLEMENTED", "TESTED"],
-        evidence_ids: ["cao-public-proof"],
+        evidence_ids: ["cao-public-proof", "cao-main-private", "cao-cp08-proof"],
       },
     ],
     known_limitations: [
