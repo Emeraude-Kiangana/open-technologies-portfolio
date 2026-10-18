@@ -5,6 +5,19 @@ import {
   projects,
 } from "@/data/projects";
 
+const featuredOrder = ["eCDF", "RegenTwin", "RWA Red-Team Lab", "KIANGANA 2.0 / KIF", "P01 — Open Technologies Portfolio", "NovaForge", "CPCN", "C.A.O — Chief Agent Officer"];
+const clientSummaries: Record<string, string> = {
+  "eCDF": "Moteur de transactions simulées avec règles métier testées automatiquement.",
+  "RegenTwin": "Historique vérifiable de données agricoles et contrôles d’intégrité.",
+  "RWA Red-Team Lab": "Tests adversariaux pour repérer des incohérences dans des dossiers de preuves.",
+  "KIANGANA 2.0 / KIF": "Routage API entre fournisseurs IA avec mécanismes de repli testés.",
+  "P01 — Open Technologies Portfolio": "Site web déployé avec automatisation de publication et preuves techniques.",
+  "NovaForge": "Pipeline automatisé de production vidéo MP4 via FFmpeg ; code privé.",
+  "CPCN": "Recherche et simulateur de dossiers de preuves pour le financement des PME ; code privé.",
+  "C.A.O — Chief Agent Officer": "Prototype de coordination et d’exécution de missions d’agents IA ; code privé.",
+};
+const clientFirstProjects = [...projects].sort((a, b) => featuredOrder.indexOf(a.name) - featuredOrder.indexOf(b.name));
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-950 px-6 py-12 text-zinc-100 sm:px-10 sm:py-16 lg:px-24">
@@ -17,7 +30,7 @@ export default function Home() {
             Emeraude Kiangana
           </h1>
           <p className="mt-4 text-xl text-zinc-400">
-            Builder · Open Technologies · République Démocratique du Congo
+            Développeur freelance · Automatisation technique · RDC / International
           </p>
           <p className="mx-auto mt-6 max-w-3xl leading-7 text-zinc-300">
             Build → Test → Prove → Publish. Cet index présente l’état vérifié des projets
@@ -143,14 +156,14 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 xl:grid-cols-2">
-            {projects.map((project) => (
+            {clientFirstProjects.map((project) => ( 
               <article
                 key={project.name}
                 className="flex h-full min-w-0 flex-col rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 shadow-sm shadow-black/20 sm:p-8"
               >
                 <div>
                   <h3 className="text-2xl font-bold tracking-tight">{project.name}</h3>
-                  <p className="mt-3 leading-7 text-zinc-300">{project.description}</p>
+                  <p className="mt-3 text-base font-medium leading-7 text-zinc-100">{clientSummaries[project.name] ?? project.description}</p>\n                  <p className="mt-2 text-sm leading-6 text-zinc-400">{project.description}</p>
                 </div>
 
                 <dl className="mt-6 grid gap-4 sm:grid-cols-2">
