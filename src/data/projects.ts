@@ -227,7 +227,7 @@ export const projects: ProjectEvidence[] = [
     publicEvidenceStatus: ["PARTIAL", "PRIVATE SOURCE", "UNKNOWN"],
     sourceVisibility: "PRIVATE",
     version: "v0.1.0-alpha",
-    demo: "PUBLIC PROOF PACKAGE · HTTP STATUS UNKNOWN",
+    demo: "PUBLIC PROOF PACKAGE · ACCESSIBILITY UNVERIFIED",
     license: "No license currently granted",
     source: "PRIVATE — Emeraude-Kiangana/novaforge",
     verifiedScope: [
@@ -396,7 +396,7 @@ export const projects: ProjectEvidence[] = [
     publicEvidenceStatus: ["AVAILABLE"],
     sourceVisibility: "PUBLIC",
     version: "0.1.0",
-    demo: "PUBLIC PORTFOLIO · HTTP STATUS UNKNOWN",
+    demo: "PUBLIC PORTFOLIO · ACCESSIBILITY UNVERIFIED",
     license: "No license currently granted",
     source: "Emeraude-Kiangana/open-technologies-portfolio",
     sourceHref: "https://github.com/Emeraude-Kiangana/open-technologies-portfolio",
