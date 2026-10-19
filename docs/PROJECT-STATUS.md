@@ -36,6 +36,12 @@ The pre-normalization repository name is historical only and is not an active ca
 | Freelance SEO + Discoverability | TESTED / DEPLOYED | Canonicals, route metadata, sitemap, index policy, JSON-LD and SEO validator |
 | Anonymous HTTP reachability | UNKNOWN | External clients could not complete GitHub Pages DNS/HTTP verification in this execution environment |
 
+## Master Control Center registry
+
+The expanded account-level registry is tracked in [`MCC-PROJECT-REGISTRY.md`](MCC-PROJECT-REGISTRY.md).
+
+`MCC-NORM-01` establishes governance identifiers and source boundaries only. It does not change project maturity claims or force every tracked project into the public P01 project index.
+
 ## Evidence model
 
 P01 tracks separate dimensions.
