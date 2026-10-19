@@ -24,6 +24,12 @@ Operating rule:
 
 P01 presents proofs. P01 does not create proofs for another project.
 
+## Master Control Center registry
+
+The account-level Open Technologies project registry is maintained in [`docs/MCC-PROJECT-REGISTRY.md`](docs/MCC-PROJECT-REGISTRY.md).
+
+The registry is a governance surface, not a maturity upgrade: tracked projects may be public, private, experimental, research-only, provenance-blocked or outside the public P01 index.
+
 ## Evidence model
 
 A public technical claim should resolve to an identifiable source such as:
