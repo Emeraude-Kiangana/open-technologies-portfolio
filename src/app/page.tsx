@@ -22,63 +22,34 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-950 px-6 py-12 text-zinc-100 sm:px-10 sm:py-16 lg:px-24">
       <div className="mx-auto max-w-6xl">
-        <section className="py-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
-            Open Technologies Portfolio
+        <section className="relative isolate overflow-hidden rounded-3xl border border-border-default bg-surface px-5 py-16 text-center shadow-2xl shadow-black/20 sm:px-10 sm:py-20 lg:py-24" aria-labelledby="hero-title">
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(56,232,213,0.13),transparent_60%)]" />
+          <p className="mx-auto inline-flex items-center rounded-full border border-accent-primary/40 bg-accent-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent-primary">
+            Open Technologies · RDC / International
           </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-            Emeraude Kiangana
+          <h1 id="hero-title" className="mx-auto mt-7 max-w-4xl text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Des automatisations techniques construites, testées et documentées.
           </h1>
-          <p className="mt-4 text-xl text-zinc-400">
-            Développeur freelance · Automatisation technique · RDC / International
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-text-muted sm:text-xl">
+            Je suis Emeraude Kiangana. Je développe des solutions API, CI/CD et des pipelines FFmpeg, avec des livrables vérifiables et un périmètre clairement défini.
           </p>
-          <p className="mx-auto mt-6 max-w-3xl leading-7 text-zinc-300">
-            Build → Test → Prove → Publish. Cet index présente l’état vérifié des projets
-            documentés, sans confondre maturité technique et disponibilité publique des preuves.
-          </p>
-          <nav
-            className="mt-8 flex flex-wrap justify-center gap-3"
-            aria-label="Navigation principale"
-          >
-            <a
-              href="/open-technologies-portfolio/intake/?source=homepage-hero"
-              className="rounded-lg bg-zinc-100 px-4 py-2 font-medium text-zinc-950 hover:bg-white focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              Start a project
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+            <a href="/open-technologies-portfolio/intake/?source=homepage-hero" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-accent-primary px-6 py-3 font-semibold text-background transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-primary">
+              Discuter d’un projet <span aria-hidden="true" className="ml-2">↗</span>
             </a>
-            <a
-              href="/open-technologies-portfolio/services/"
-              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              Services freelance
+            <a href="/open-technologies-portfolio/case-studies/" className="inline-flex min-h-12 items-center justify-center rounded-xl border border-border-default bg-surface-elevated px-6 py-3 font-semibold text-foreground transition-colors hover:border-accent-primary hover:text-accent-primary">
+              Examiner les réalisations
             </a>
-            <a
-              href="/open-technologies-portfolio/case-studies/"
-              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              Case studies
-            </a>
-            <a
-              href="#project-index"
-              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              Explorer les projets
-            </a>
-            <a
-              href="/open-technologies-portfolio/support/"
-              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              Ask Open Technologies
-            </a>
-            <a
-              href="https://github.com/Emeraude-Kiangana"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg border border-zinc-700 px-4 py-2 font-medium hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-200 focus:ring-offset-2 focus:ring-offset-zinc-950"
-            >
-              GitHub
-            </a>
+          </div>
+          <nav className="mx-auto mt-9 flex max-w-3xl flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-text-muted" aria-label="Accès rapides">
+            <a className="underline-offset-4 hover:text-accent-primary hover:underline" href="/open-technologies-portfolio/services/">Services</a>
+            <a className="underline-offset-4 hover:text-accent-primary hover:underline" href="#project-index">Projets et preuves</a>
+            <a className="underline-offset-4 hover:text-accent-primary hover:underline" href="/open-technologies-portfolio/support/">Support</a>
+            <a className="underline-offset-4 hover:text-accent-primary hover:underline" href="https://github.com/Emeraude-Kiangana" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </nav>
+          <p className="mx-auto mt-10 max-w-2xl border-t border-border-default pt-6 font-mono text-xs tracking-wide text-text-muted">
+            BUILD → TEST → PROVE → PUBLISH · CLAIM ≤ EVIDENCE
+          </p>
         </section>
 
         <div className="pb-10">
