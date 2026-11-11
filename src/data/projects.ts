@@ -146,7 +146,7 @@ export const projects: ProjectEvidence[] = [
     name: "KIANGANA 2.0 / KIF",
     description:
       "Human–AI operating system with governed mission execution; KIF V0.2 is tracked as a distinct historical checkpoint.",
-    projectStatus: ["DOCUMENTED", "IMPLEMENTED", "TESTED", "PUBLIC"],
+    projectStatus: ["DOCUMENTED", "IMPLEMENTED", "PUBLIC"],
     statusBreakdown: [
       {
         label: "KIANGANA 2.0 current main",
