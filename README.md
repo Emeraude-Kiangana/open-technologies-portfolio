@@ -10,9 +10,10 @@ Public evidence index for technical projects built, tested and documented by Eme
 - Repository: **PUBLIC**
 - Live Portfolio: https://emeraude-kiangana.github.io/open-technologies-portfolio/
 - License: **No license currently granted**
-- Last project-evidence synchronization: **2026-09-20**
+- Last source-head review: **2026-11-11**
+- Evidence synchronization checkpoint: [P01-COMP-01](docs/P01-COMP-01-EVIDENCE-SYNC.md) — **OPEN / validation pending**
 
-The Pages URL is configuration evidence until an external HTTP smoke test confirms anonymous reachability after the current normalization merge.
+The Pages URL remains configuration evidence until an external anonymous HTTP smoke test confirms reachability. The 2026-11-11 source-head review does not itself establish deployment or URL availability.
 
 ## Purpose
 

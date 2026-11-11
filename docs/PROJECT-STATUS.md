@@ -1,6 +1,6 @@
 # P01 — Open Technologies Portfolio — Project Status
 
-Status date: **2026-10-15**
+Status date: **2026-11-11**
 
 ## Current phase
 
@@ -189,13 +189,13 @@ Boundary: CP07 does not claim search-engine indexing, ranking, organic traffic, 
 |---|---|---|
 | CPCN | private `main@f98056fd5db26377545e0dc6549bfe47fd9d91af` | Global `DOCUMENTED`; G0-01 frozen field collection; G0-02 `DOCUMENTED / IMPLEMENTED / TESTED`; partial public evidence; external validation not claimed |
 | eCDF | public `main@6ba26e8dd0f6d5648f2b49a71c8611396bd4f8be`; current-main CI `36019846765` SUCCESS | `TESTED · PUBLIC`; 29/29 tests + deterministic local demo; CP03-C / CP03-D are documentation-only Stellar feasibility/boundary checkpoints; no live Stellar settlement adapter |
-| KIANGANA 2.0 | public `main@0f9829e54436ae860977c3d2b3349d74482258da`; normalization PR #8 CI `35465436732` SUCCESS | `DOCUMENTED / IMPLEMENTED / TESTED / PUBLIC`; product-normalization documentation is now canonical main |
+| KIANGANA 2.0 | public `main@7fd4fb5f514aab92caad9caea8c2c956508e87f6`; PR #13 merge includes JARVIS CORE BUILD 001.1 approval hardening | Current-main BUILD 001.1 classified `DOCUMENTED / IMPLEMENTED`; latest-commit CI not verified; historical KIF V0.2 CP-01 remains separately `REPRODUCIBLE` |
 | KIF V0.2 CP-01 | proof `69d3c9a1fdfc9616700572011a466b549be0c867`; freeze `57c4bfc2664398383a784128a9fa03dc3e41c0e4`; live run `35286354669`; freeze run `35287044624` | Historical `REPRODUCIBLE`, CLOSED / FROZEN checkpoint; `kif/` is not present on current main |
 | NovaForge | private `main@74aa0bbbd7a9b4dceb0b987b27d2c670cac40903`; main CI `35464627769` SUCCESS | `REPRODUCIBLE`; v0.1.0-alpha; 100/100 regression + 1/1 E2E on reference release CI; public P01 proof assets exist; anonymous HTTP status UNKNOWN |
 | RegenTwin | public `main@fadf386ed5c62dcd45a66008e8b2989b6402b63f`; CI `35324672286` SUCCESS | `TESTED` Gate 0; 4 tests; no release version claimed; no license file detected |
 | RWA Red-Team Lab | public `main@922291ca7076ed871f70d6c70623c7b61541297e`; CI `35327731335` SUCCESS | `TESTED` deterministic Gate 0 verifier; 4 tests; no release version claimed; no license file detected |
 | C.A.O — Chief Agent Officer | private `main@839b0ea0f4d79e5abbb52d1d440732fda20135ea`; CP-08 proof run `35480285634` SUCCESS; main CP-08 workflow `35480372127` SUCCESS | CP-01 → CP-08 CLOSED / TESTED — CI-BACKED; 113/113 full suite; verified Marketplace engagement → CP-07 execution handoff; payment/settlement not implemented; reproducibility/public source not claimed |
-| P01 | public `main@8f0d3e986311f56a62ef27799a0abe67c8e52d75`; Portfolio CI `36175997148`, deploy `36175996914`, Pages `36176051392` SUCCESS | Public evidence hub with Freelance CP01→CP07 closed; Normalization Delta Pass v2 is resynchronizing eCDF/C.A.O evidence without changing project maturity claims |
+| P01 | public review baseline `main@9358d0876181074604575de9ef06df4ff6eb8f43`; COMP-01 documentation changes isolated on audit branch | Evidence synchronization documented; branch validation pending; no new deployment or current anonymous HTTP claim |
 
 Normalization note: eCDF current GitHub `main@6ba26e8…` and workflow `36019846765` are newer than the verified-main anchors still written inside eCDF's own `docs/PROJECT-STATUS.md`. P01 therefore cites the current GitHub commit/workflow while preserving the boundary that CP03-C / CP03-D are documentation/feasibility evidence only and do not implement a Stellar adapter.
 
@@ -319,3 +319,16 @@ This resynchronization creates no new P01 checkpoint.
 **CURRENT P01 CLAIM ≤ CURRENT SOURCE PROJECT EVIDENCE**
 
 P01 publishes proofs; it does not create proofs for other projects.
+
+## P01-COMP-01 — Evidence Synchronization (2026-11-11)
+
+**Status: OPEN / VALIDATION PENDING**
+
+The selected canonical source heads were inspected and recorded in [P01-COMP-01-EVIDENCE-SYNC.md](P01-COMP-01-EVIDENCE-SYNC.md).
+
+- P01 baseline: `9358d0876181074604575de9ef06df4ff6eb8f43`.
+- KIANGANA 2.0 current main: `7fd4fb5f514aab92caad9caea8c2c956508e87f6`; JARVIS CORE BUILD 001.1 is classified DOCUMENTED / IMPLEMENTED. The latest-commit workflow lookup returned no run, so no fresh CI pass is claimed.
+- Existing eCDF, CPCN, NovaForge, RegenTwin, RWA Red-Team Lab and C.A.O source boundaries are retained.
+- No local P01 build, test suite, anonymous HTTP smoke test, or complete cross-repository CI revalidation was performed in this checkpoint.
+
+This source-head review does not promote project maturity, prove deployment availability, or authorize merge/deployment.
