@@ -151,7 +151,7 @@ export const projects: ProjectEvidence[] = [
       {
         label: "KIANGANA 2.0 current main",
         statuses: ["DOCUMENTED", "IMPLEMENTED", "TESTED", "PUBLIC"],
-        note: "Canonical main is 0f9829e54436ae860977c3d2b3349d74482258da.",
+        note: "Canonical main is 7fd4fb5f514aab92caad9caea8c2c956508e87f6. Latest-main CI for this commit is not verified in P01-COMP-01.",
       },
       {
         label: "KIF V0.2 CP-01",
@@ -167,7 +167,8 @@ export const projects: ProjectEvidence[] = [
     source: "Emeraude-Kiangana/kiangana-2.0",
     sourceHref: "https://github.com/Emeraude-Kiangana/kiangana-2.0",
     verifiedScope: [
-      "Current canonical main remains 0f9829e54436ae860977c3d2b3349d74482258da.",
+      "Current canonical main is 7fd4fb5f514aab92caad9caea8c2c956508e87f6 (PR #13 merge).",
+      "JARVIS CORE BUILD 001.1 approval hardening is present on current main: immutable lifecycle state, fail-closed requested-action approval and transition validation. Classified DOCUMENTED / IMPLEMENTED; the latest-commit workflow lookup returned no run, so no fresh CI pass is claimed.",
       "Normalization PR #8 CI run 35465436732 completed successfully before merge; normalized documentation is now on main.",
       "KIF V0.2 CP-01 is a REPRODUCIBLE historical checkpoint: proof 69d3c9a1fdfc9616700572011a466b549be0c867 → freeze 57c4bfc2664398383a784128a9fa03dc3e41c0e4 with one commit and zero file changes.",
       "KIF proof run 35286354669 passed 41 unit tests and 3 integration tests, including real DeepSeek, real Groq and fallback integration test files.",
@@ -210,7 +211,7 @@ export const projects: ProjectEvidence[] = [
       "Historical root Gate Zero run 35287044647 failed at the KIF freeze head; later current-main Gate Zero runs are green.",
       "KIF V0.2 remains historical and distinct from the current-main governance foundation.",
     ],
-    lastVerified: "2026-09-19",
+    lastVerified: "2026-11-11",
   },
   {
     name: "NovaForge",
