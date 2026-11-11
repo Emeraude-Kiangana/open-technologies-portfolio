@@ -1,6 +1,6 @@
 # P01 — Open Technologies Portfolio — Project Status
 
-Status date: **2026-10-15**
+Status date: **2026-11-11**
 
 ## Current phase
 
@@ -319,3 +319,16 @@ This resynchronization creates no new P01 checkpoint.
 **CURRENT P01 CLAIM ≤ CURRENT SOURCE PROJECT EVIDENCE**
 
 P01 publishes proofs; it does not create proofs for other projects.
+
+## P01-COMP-01 — Evidence Synchronization (2026-11-11)
+
+**Status: OPEN / VALIDATION PENDING**
+
+The selected canonical source heads were inspected and recorded in [P01-COMP-01-EVIDENCE-SYNC.md](P01-COMP-01-EVIDENCE-SYNC.md).
+
+- P01 baseline: `9358d0876181074604575de9ef06df4ff6eb8f43`.
+- KIANGANA 2.0 current main: `7fd4fb5f514aab92caad9caea8c2c956508e87f6`; JARVIS CORE BUILD 001.1 is classified DOCUMENTED / IMPLEMENTED. The latest-commit workflow lookup returned no run, so no fresh CI pass is claimed.
+- Existing eCDF, CPCN, NovaForge, RegenTwin, RWA Red-Team Lab and C.A.O source boundaries are retained.
+- No local P01 build, test suite, anonymous HTTP smoke test, or complete cross-repository CI revalidation was performed in this checkpoint.
+
+This source-head review does not promote project maturity, prove deployment availability, or authorize merge/deployment.
